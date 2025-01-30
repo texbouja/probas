@@ -1,0 +1,22 @@
+WARNING : Could not find a target 'pdf', but found a target 'print' with format='pdf'; using this target.
+INFO    : Building target print
+INFO    : Preparing to build into /media/home/Backup/Dropbox/2024/projects/probas/output/print.
+INFO    : discovering source file's directory name: /media/home/Backup/Dropbox/2024/projects/probas/source
+INFO    : verifying and expanding input directory: /media/home/Backup/Dropbox/2024/projects/probas/source/../generated-assets
+INFO    : input directory expanded to absolute path: /media/home/Backup/Dropbox/2024/projects/probas/generated-assets
+INFO    : verifying and expanding input directory: /media/home/Backup/Dropbox/2024/projects/probas/source/../assets
+INFO    : input directory expanded to absolute path: /media/home/Backup/Dropbox/2024/projects/probas/assets
+INFO    : XSL conversion of /media/home/Backup/Dropbox/2024/projects/probas/source/main.ptx by /home/bmint/.ptx/2.12.0/core/xsl/utilities/report-publisher-variables.xsl
+INFO    : successful application of /home/bmint/.ptx/2.12.0/core/xsl/utilities/report-publisher-variables.xsl
+INFO    : converting /media/home/Backup/Dropbox/2024/projects/probas/source/main.ptx to LaTeX as /tmp/ptx-agzjm3tq/main.tex
+INFO    : XSL conversion of /media/home/Backup/Dropbox/2024/projects/probas/source/main.ptx by /home/bmint/.ptx/2.12.0/core/xsl/pretext-latex.xsl
+INFO    : messages from the log for XSL processing:
+INFO    : * PTX:INFO:   checking ONLY the last TWO YEARS of element deprecations.
+Rerun with the string parameter "author.deprecations.all" set to "yes" to check your source against all deprecations.
+INFO    : successful application of /home/bmint/.ptx/2.12.0/core/xsl/pretext-latex.xsl
+INFO    : Removing temporary directory /tmp/ptx-agzjm3tq
+INFO    : Removing temporary directory /tmp/ptx-_tum94xh
+INFO    : 
+Success! Run `pretext view` to see the results.
+
+INFO    : 

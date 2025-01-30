@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="ch-varalea" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Variables aléatoires discrètes</title>
+
+<section xml:id="sec-varalea">
+  <title>Variables aléatoires</title>
+  <p>
+    On se donne dans ce chapitre un espace probabilisé <m>(\Omega,\mathscr T,\Pr)</m> et un espace probabilisable <m>(\Omega',\mathscr T')</m>
+  </p>
+
+  <definition xml:id="def-varalea">
+    <statement>
+      <p>
+        On appelle variable aléatoire de <m>(\Omega,\mathscr T)</m> dans <m>(\Omega',\mathscr T')</m> toute application <m>X:\Omega\longrightarrow \Omega'</m> telle que
+        <me>
+          \forall A'\in\mathscr T',\; X^{-1}(A')\in\mathscr T
+        </me>
+        (l'image réciproque de tout événement est un événement).
+        </p> 
+        <p>
+        Une variable aléatoire <m>X</m> définie sur <m>(\Omega,\mathscr T)</m> est dite discrète si l'ensemble <m>X(\Omega)</m> est au plus dénombrable. Elle est dite réelle si <m>X(\Omega)\subset \R</m>.
+      </p>
+    </statement>
+    <explanation>
+  <p>
+    Dans la pratique une variable aléatoire est utilisée pour représenter le résultat d'une expérience aléatoire. Souvent l'univers <m>\Omega</m> et la tribu <m>\mathscr T</m> ne sont pas précisés. Les résultats et les événements de l'expérience sont dans <m>\Omega</m> et <m>\mathscr T'</m>. La question est comment choisir <m>(\Omega',\mathscr T')</m> et de quelle tribu munir <m>\Omega</m> pour que le résultat de l'expérience soit une variable aléatoire ? Les remarques suivantes donnent des éléments de réponse.
+    </p>
+  </explanation>
+  </definition>
+  
+
+  <remark>
+    <ol>
+      <li>
+        <p>
+          Un univers au plus dénombrables sera systématiquement muni de la tribu formée par toutes ses parties.  
+        </p>
+      </li>
+      <li>
+        <p> Soit <m>f</m> une application quelconque définie de <m>\Omega</m> dans <m>\Omega'</m>. L'ensemble 
+        <me>
+          \mathscr T_f=\bigl\{ f^{-1}(A')\mid A'\in\mathscr T'\}
+        </me>
+        est une tribu de <m>\Omega</m> et <m>f</m> est une variable aléatoire de <m>(\Omega,\mathscr T_f)</m> dans <m>(\Omega,\mathscr T)</m>.
+        </p> 
+        <p>
+          Si <m>\Omega'</m> est au plus dénombrable et <m>\mathscr T'=\mathscr P(\Omega')</m>, on voit qu'une application quelconque peut être considérée comme une variable aléatoire avec très peu de contrainte. Il suffit de se placer dans une tribu qui contient <m>\mathscr T_f</m>. 
+        </p>
+        <p>
+          Ainsi si <m>f_1,f_2,\ldots,f_p</m> sont des applications définies sur <m>\Omega</m> telles que <m>f_k(\Omega)</m> soit au plus dénombrable pour tout <m>k\in[\![1,n]\!]</m> alors on peut poser :
+          <ul>
+            <li>
+                <m>\Omega'=\bigcup_{k=1}^p f_k(\Omega) \text{ et } \mathscr T'=\mathscr P(\Omega');</m>
+            </li>
+            <li>
+              <m>\mathscr T=\sigma\biggl(\bigcup_{k=1}^p\mathscr T_{f_k}\biggr)</m>
+            </li>
+          </ul>
+          de telle sorte que les applications <m>f_1,f_2,\ldots,f_p</m> soient toutes des variables aléatoires discrètes de  <m>(\Omega,\mathscr T)</m> dans <m>(\Omega',\mathscr T')</m>.  Ses observations restent valide avec une famille au plus dénombrable d'applications  <m>(f_i)_{i\in I}</m> définies sur <m>\Omega</m>.
+        </p>
+      </li>
+    </ol>
+  </remark>
+
+  <definition> 
+  <p> 
+    étant donné des variables aléatoires <m>X, X_1,\ldots,X_n</m> de <m>(\Omega, \mathscr T)</m> dans <m>(\Omega', \mathscr T')</m>, on note 
+  \<ul>
+    <li> <m>\text{pour tout }x\in \mathscr T',\; (X=x)=X^{-1}(\{x\})=\{\omega\in\Omega\mid X(\omega)=x\}; (\Omega' \text{est au plus dénombrable})</m>
+    </li>
+    <li> <m>\text{pour tous }x_1,x_2,\ldots,x_n\in \mathscr T',\; 
+    (X_1=x_1,X_2=x_2,\ldots,X_n=x_n)=\bigcap_{k=1}^n(X_k=x_k);</m>
+    </li>
+    <li> <m>\text{pour tout } A'\in \mathscr T',\; (X\in A')=X^{-1}(A')=\{\omega\in\Omega\mid X(\omega)\in A`\};</m>
+    </li>
+    <li> <m>\text{pour tous } A_1',A_2',\ldots,A_n'\in \mathscr T',\; (X_1\in A'_1,X_2\in A_2',\ldots,X_n\in A'_n)=\bigcap_{k=1}^n(X_k\in A_k');</m>
+    </li>
+  </ul>
+  </p>
+  </definition>
+
+<theorem>
+  <statement>
+    <p>
+      Soit <m>X</m> une variables aléatoire discrète de <m>(\Omega,\mathscr T)</m> dans <m>(\Omega',\mathscr T')</m>. telle que <m>\mathscr P(X_{\Omega})\subset \mathscr T'</m>. 
+      <ol>
+        
+        </ol> 
+      </p>
+    </statement>
+  </theorem>
+
+</section>
+</chapter>

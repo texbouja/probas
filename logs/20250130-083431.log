@@ -1,0 +1,574 @@
+INFO    : Since no target was supplied, we will use "web".
+
+INFO    : Now preparing local server to preview your project directory `/media/home/Backup/Dropbox/2024/projects/probas`.
+INFO    :   (Reminder: use `pretext deploy` to deploy your built project to a public
+INFO    :   GitHub Pages site that can be shared with readers who cannot access your
+INFO    :   personal computer.)
+INFO    : 
+INFO    : starting server ...
+INFO    : setting up ...
+INFO    : values set...
+INFO    : adding server entry
+INFO    : There are 10 or more servers on file. Cleaning up ...
+INFO    : Terminating 172374
+INFO    : Terminate failed for 172374.
+ERROR   : process PID not found (pid=172374)
+Traceback (most recent call last):
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/_pslinux.py", line 1716, in wrapper
+    return fun(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/_common.py", line 508, in wrapper
+    raise raise_from(err, None)
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 3, in raise_from
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/_common.py", line 506, in wrapper
+    return fun(self)
+           ^^^^^^^^^
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/_pslinux.py", line 1784, in _parse_stat_file
+    data = bcat("%s/%s/stat" % (self._procfs_path, self.pid))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/_common.py", line 851, in bcat
+    return cat(fname, fallback=fallback, _open=open_binary)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/_common.py", line 839, in cat
+    with _open(fname) as f:
+         ^^^^^^^^^^^^
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/_common.py", line 799, in open_binary
+    return open(fname, "rb", buffering=FILE_READ_BUFFER_SIZE)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/proc/172374/stat'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/__init__.py", line 355, in _init
+    self._ident = self._get_ident()
+                  ^^^^^^^^^^^^^^^^^
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/__init__.py", line 396, in _get_ident
+    return (self.pid, self.create_time())
+                      ^^^^^^^^^^^^^^^^^^
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/__init__.py", line 778, in create_time
+    self._create_time = self._proc.create_time()
+                        ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/_pslinux.py", line 1716, in wrapper
+    return fun(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/_pslinux.py", line 1957, in create_time
+    ctime = float(self._parse_stat_file()['create_time'])
+                  ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/_pslinux.py", line 1730, in wrapper
+    raise NoSuchProcess(self.pid, self._name)
+psutil.NoSuchProcess: process no longer exists (pid=172374)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/pretext/server.py", line 68, in terminate
+    psutil.Process(self.pid).terminate()
+    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/__init__.py", line 319, in __init__
+    self._init(pid)
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/__init__.py", line 368, in _init
+    raise NoSuchProcess(pid, msg=msg)
+psutil.NoSuchProcess: process PID not found (pid=172374)
+INFO    : Terminating 212780
+INFO    : Terminate failed for 212780.
+ERROR   : process PID not found (pid=212780)
+Traceback (most recent call last):
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/_pslinux.py", line 1716, in wrapper
+    return fun(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/_common.py", line 508, in wrapper
+    raise raise_from(err, None)
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 3, in raise_from
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/_common.py", line 506, in wrapper
+    return fun(self)
+           ^^^^^^^^^
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/_pslinux.py", line 1784, in _parse_stat_file
+    data = bcat("%s/%s/stat" % (self._procfs_path, self.pid))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/_common.py", line 851, in bcat
+    return cat(fname, fallback=fallback, _open=open_binary)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/_common.py", line 839, in cat
+    with _open(fname) as f:
+         ^^^^^^^^^^^^
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/_common.py", line 799, in open_binary
+    return open(fname, "rb", buffering=FILE_READ_BUFFER_SIZE)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/proc/212780/stat'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/__init__.py", line 355, in _init
+    self._ident = self._get_ident()
+                  ^^^^^^^^^^^^^^^^^
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/__init__.py", line 396, in _get_ident
+    return (self.pid, self.create_time())
+                      ^^^^^^^^^^^^^^^^^^
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/__init__.py", line 778, in create_time
+    self._create_time = self._proc.create_time()
+                        ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/_pslinux.py", line 1716, in wrapper
+    return fun(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/_pslinux.py", line 1957, in create_time
+    ctime = float(self._parse_stat_file()['create_time'])
+                  ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/_pslinux.py", line 1730, in wrapper
+    raise NoSuchProcess(self.pid, self._name)
+psutil.NoSuchProcess: process no longer exists (pid=212780)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/pretext/server.py", line 68, in terminate
+    psutil.Process(self.pid).terminate()
+    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/__init__.py", line 319, in __init__
+    self._init(pid)
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/__init__.py", line 368, in _init
+    raise NoSuchProcess(pid, msg=msg)
+psutil.NoSuchProcess: process PID not found (pid=212780)
+INFO    : Terminating 3602
+INFO    : Terminate failed for 3602.
+ERROR   : process PID not found (pid=3602)
+Traceback (most recent call last):
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/_pslinux.py", line 1716, in wrapper
+    return fun(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/_common.py", line 508, in wrapper
+    raise raise_from(err, None)
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 3, in raise_from
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/_common.py", line 506, in wrapper
+    return fun(self)
+           ^^^^^^^^^
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/_pslinux.py", line 1784, in _parse_stat_file
+    data = bcat("%s/%s/stat" % (self._procfs_path, self.pid))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/_common.py", line 851, in bcat
+    return cat(fname, fallback=fallback, _open=open_binary)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/_common.py", line 839, in cat
+    with _open(fname) as f:
+         ^^^^^^^^^^^^
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/_common.py", line 799, in open_binary
+    return open(fname, "rb", buffering=FILE_READ_BUFFER_SIZE)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/proc/3602/stat'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/__init__.py", line 355, in _init
+    self._ident = self._get_ident()
+                  ^^^^^^^^^^^^^^^^^
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/__init__.py", line 396, in _get_ident
+    return (self.pid, self.create_time())
+                      ^^^^^^^^^^^^^^^^^^
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/__init__.py", line 778, in create_time
+    self._create_time = self._proc.create_time()
+                        ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/_pslinux.py", line 1716, in wrapper
+    return fun(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/_pslinux.py", line 1957, in create_time
+    ctime = float(self._parse_stat_file()['create_time'])
+                  ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/_pslinux.py", line 1730, in wrapper
+    raise NoSuchProcess(self.pid, self._name)
+psutil.NoSuchProcess: process no longer exists (pid=3602)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/pretext/server.py", line 68, in terminate
+    psutil.Process(self.pid).terminate()
+    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/__init__.py", line 319, in __init__
+    self._init(pid)
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/__init__.py", line 368, in _init
+    raise NoSuchProcess(pid, msg=msg)
+psutil.NoSuchProcess: process PID not found (pid=3602)
+INFO    : Terminating 3602
+INFO    : Terminate failed for 3602.
+ERROR   : process PID not found (pid=3602)
+Traceback (most recent call last):
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/_pslinux.py", line 1716, in wrapper
+    return fun(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/_common.py", line 508, in wrapper
+    raise raise_from(err, None)
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 3, in raise_from
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/_common.py", line 506, in wrapper
+    return fun(self)
+           ^^^^^^^^^
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/_pslinux.py", line 1784, in _parse_stat_file
+    data = bcat("%s/%s/stat" % (self._procfs_path, self.pid))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/_common.py", line 851, in bcat
+    return cat(fname, fallback=fallback, _open=open_binary)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/_common.py", line 839, in cat
+    with _open(fname) as f:
+         ^^^^^^^^^^^^
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/_common.py", line 799, in open_binary
+    return open(fname, "rb", buffering=FILE_READ_BUFFER_SIZE)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/proc/3602/stat'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/__init__.py", line 355, in _init
+    self._ident = self._get_ident()
+                  ^^^^^^^^^^^^^^^^^
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/__init__.py", line 396, in _get_ident
+    return (self.pid, self.create_time())
+                      ^^^^^^^^^^^^^^^^^^
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/__init__.py", line 778, in create_time
+    self._create_time = self._proc.create_time()
+                        ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/_pslinux.py", line 1716, in wrapper
+    return fun(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/_pslinux.py", line 1957, in create_time
+    ctime = float(self._parse_stat_file()['create_time'])
+                  ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/_pslinux.py", line 1730, in wrapper
+    raise NoSuchProcess(self.pid, self._name)
+psutil.NoSuchProcess: process no longer exists (pid=3602)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/pretext/server.py", line 68, in terminate
+    psutil.Process(self.pid).terminate()
+    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/__init__.py", line 319, in __init__
+    self._init(pid)
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/__init__.py", line 368, in _init
+    raise NoSuchProcess(pid, msg=msg)
+psutil.NoSuchProcess: process PID not found (pid=3602)
+INFO    : Terminating 3602
+INFO    : Terminate failed for 3602.
+ERROR   : process PID not found (pid=3602)
+Traceback (most recent call last):
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/_pslinux.py", line 1716, in wrapper
+    return fun(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/_common.py", line 508, in wrapper
+    raise raise_from(err, None)
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 3, in raise_from
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/_common.py", line 506, in wrapper
+    return fun(self)
+           ^^^^^^^^^
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/_pslinux.py", line 1784, in _parse_stat_file
+    data = bcat("%s/%s/stat" % (self._procfs_path, self.pid))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/_common.py", line 851, in bcat
+    return cat(fname, fallback=fallback, _open=open_binary)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/_common.py", line 839, in cat
+    with _open(fname) as f:
+         ^^^^^^^^^^^^
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/_common.py", line 799, in open_binary
+    return open(fname, "rb", buffering=FILE_READ_BUFFER_SIZE)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/proc/3602/stat'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/__init__.py", line 355, in _init
+    self._ident = self._get_ident()
+                  ^^^^^^^^^^^^^^^^^
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/__init__.py", line 396, in _get_ident
+    return (self.pid, self.create_time())
+                      ^^^^^^^^^^^^^^^^^^
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/__init__.py", line 778, in create_time
+    self._create_time = self._proc.create_time()
+                        ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/_pslinux.py", line 1716, in wrapper
+    return fun(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/_pslinux.py", line 1957, in create_time
+    ctime = float(self._parse_stat_file()['create_time'])
+                  ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/_pslinux.py", line 1730, in wrapper
+    raise NoSuchProcess(self.pid, self._name)
+psutil.NoSuchProcess: process no longer exists (pid=3602)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/pretext/server.py", line 68, in terminate
+    psutil.Process(self.pid).terminate()
+    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/__init__.py", line 319, in __init__
+    self._init(pid)
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/__init__.py", line 368, in _init
+    raise NoSuchProcess(pid, msg=msg)
+psutil.NoSuchProcess: process PID not found (pid=3602)
+INFO    : Terminating 3602
+INFO    : Terminate failed for 3602.
+ERROR   : process PID not found (pid=3602)
+Traceback (most recent call last):
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/_pslinux.py", line 1716, in wrapper
+    return fun(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/_common.py", line 508, in wrapper
+    raise raise_from(err, None)
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 3, in raise_from
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/_common.py", line 506, in wrapper
+    return fun(self)
+           ^^^^^^^^^
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/_pslinux.py", line 1784, in _parse_stat_file
+    data = bcat("%s/%s/stat" % (self._procfs_path, self.pid))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/_common.py", line 851, in bcat
+    return cat(fname, fallback=fallback, _open=open_binary)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/_common.py", line 839, in cat
+    with _open(fname) as f:
+         ^^^^^^^^^^^^
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/_common.py", line 799, in open_binary
+    return open(fname, "rb", buffering=FILE_READ_BUFFER_SIZE)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/proc/3602/stat'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/__init__.py", line 355, in _init
+    self._ident = self._get_ident()
+                  ^^^^^^^^^^^^^^^^^
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/__init__.py", line 396, in _get_ident
+    return (self.pid, self.create_time())
+                      ^^^^^^^^^^^^^^^^^^
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/__init__.py", line 778, in create_time
+    self._create_time = self._proc.create_time()
+                        ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/_pslinux.py", line 1716, in wrapper
+    return fun(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/_pslinux.py", line 1957, in create_time
+    ctime = float(self._parse_stat_file()['create_time'])
+                  ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/_pslinux.py", line 1730, in wrapper
+    raise NoSuchProcess(self.pid, self._name)
+psutil.NoSuchProcess: process no longer exists (pid=3602)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/pretext/server.py", line 68, in terminate
+    psutil.Process(self.pid).terminate()
+    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/__init__.py", line 319, in __init__
+    self._init(pid)
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/__init__.py", line 368, in _init
+    raise NoSuchProcess(pid, msg=msg)
+psutil.NoSuchProcess: process PID not found (pid=3602)
+INFO    : Terminating 3602
+INFO    : Terminate failed for 3602.
+ERROR   : process PID not found (pid=3602)
+Traceback (most recent call last):
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/_pslinux.py", line 1716, in wrapper
+    return fun(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/_common.py", line 508, in wrapper
+    raise raise_from(err, None)
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 3, in raise_from
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/_common.py", line 506, in wrapper
+    return fun(self)
+           ^^^^^^^^^
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/_pslinux.py", line 1784, in _parse_stat_file
+    data = bcat("%s/%s/stat" % (self._procfs_path, self.pid))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/_common.py", line 851, in bcat
+    return cat(fname, fallback=fallback, _open=open_binary)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/_common.py", line 839, in cat
+    with _open(fname) as f:
+         ^^^^^^^^^^^^
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/_common.py", line 799, in open_binary
+    return open(fname, "rb", buffering=FILE_READ_BUFFER_SIZE)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/proc/3602/stat'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/__init__.py", line 355, in _init
+    self._ident = self._get_ident()
+                  ^^^^^^^^^^^^^^^^^
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/__init__.py", line 396, in _get_ident
+    return (self.pid, self.create_time())
+                      ^^^^^^^^^^^^^^^^^^
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/__init__.py", line 778, in create_time
+    self._create_time = self._proc.create_time()
+                        ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/_pslinux.py", line 1716, in wrapper
+    return fun(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/_pslinux.py", line 1957, in create_time
+    ctime = float(self._parse_stat_file()['create_time'])
+                  ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/_pslinux.py", line 1730, in wrapper
+    raise NoSuchProcess(self.pid, self._name)
+psutil.NoSuchProcess: process no longer exists (pid=3602)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/pretext/server.py", line 68, in terminate
+    psutil.Process(self.pid).terminate()
+    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/__init__.py", line 319, in __init__
+    self._init(pid)
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/__init__.py", line 368, in _init
+    raise NoSuchProcess(pid, msg=msg)
+psutil.NoSuchProcess: process PID not found (pid=3602)
+INFO    : Terminating 3602
+INFO    : Terminate failed for 3602.
+ERROR   : process PID not found (pid=3602)
+Traceback (most recent call last):
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/_pslinux.py", line 1716, in wrapper
+    return fun(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/_common.py", line 508, in wrapper
+    raise raise_from(err, None)
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 3, in raise_from
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/_common.py", line 506, in wrapper
+    return fun(self)
+           ^^^^^^^^^
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/_pslinux.py", line 1784, in _parse_stat_file
+    data = bcat("%s/%s/stat" % (self._procfs_path, self.pid))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/_common.py", line 851, in bcat
+    return cat(fname, fallback=fallback, _open=open_binary)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/_common.py", line 839, in cat
+    with _open(fname) as f:
+         ^^^^^^^^^^^^
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/_common.py", line 799, in open_binary
+    return open(fname, "rb", buffering=FILE_READ_BUFFER_SIZE)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/proc/3602/stat'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/__init__.py", line 355, in _init
+    self._ident = self._get_ident()
+                  ^^^^^^^^^^^^^^^^^
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/__init__.py", line 396, in _get_ident
+    return (self.pid, self.create_time())
+                      ^^^^^^^^^^^^^^^^^^
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/__init__.py", line 778, in create_time
+    self._create_time = self._proc.create_time()
+                        ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/_pslinux.py", line 1716, in wrapper
+    return fun(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/_pslinux.py", line 1957, in create_time
+    ctime = float(self._parse_stat_file()['create_time'])
+                  ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/_pslinux.py", line 1730, in wrapper
+    raise NoSuchProcess(self.pid, self._name)
+psutil.NoSuchProcess: process no longer exists (pid=3602)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/pretext/server.py", line 68, in terminate
+    psutil.Process(self.pid).terminate()
+    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/__init__.py", line 319, in __init__
+    self._init(pid)
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/__init__.py", line 368, in _init
+    raise NoSuchProcess(pid, msg=msg)
+psutil.NoSuchProcess: process PID not found (pid=3602)
+INFO    : Terminating 3602
+INFO    : Terminate failed for 3602.
+ERROR   : process PID not found (pid=3602)
+Traceback (most recent call last):
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/_pslinux.py", line 1716, in wrapper
+    return fun(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/_common.py", line 508, in wrapper
+    raise raise_from(err, None)
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 3, in raise_from
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/_common.py", line 506, in wrapper
+    return fun(self)
+           ^^^^^^^^^
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/_pslinux.py", line 1784, in _parse_stat_file
+    data = bcat("%s/%s/stat" % (self._procfs_path, self.pid))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/_common.py", line 851, in bcat
+    return cat(fname, fallback=fallback, _open=open_binary)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/_common.py", line 839, in cat
+    with _open(fname) as f:
+         ^^^^^^^^^^^^
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/_common.py", line 799, in open_binary
+    return open(fname, "rb", buffering=FILE_READ_BUFFER_SIZE)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/proc/3602/stat'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/__init__.py", line 355, in _init
+    self._ident = self._get_ident()
+                  ^^^^^^^^^^^^^^^^^
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/__init__.py", line 396, in _get_ident
+    return (self.pid, self.create_time())
+                      ^^^^^^^^^^^^^^^^^^
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/__init__.py", line 778, in create_time
+    self._create_time = self._proc.create_time()
+                        ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/_pslinux.py", line 1716, in wrapper
+    return fun(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/_pslinux.py", line 1957, in create_time
+    ctime = float(self._parse_stat_file()['create_time'])
+                  ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/_pslinux.py", line 1730, in wrapper
+    raise NoSuchProcess(self.pid, self._name)
+psutil.NoSuchProcess: process no longer exists (pid=3602)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/pretext/server.py", line 68, in terminate
+    psutil.Process(self.pid).terminate()
+    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/__init__.py", line 319, in __init__
+    self._init(pid)
+  File "/home/bmint/.local/share/pipx/venvs/pretext/lib/python3.12/site-packages/psutil/__init__.py", line 368, in _init
+    raise NoSuchProcess(pid, msg=msg)
+psutil.NoSuchProcess: process PID not found (pid=3602)
+INFO    : Found server at localhost:8128
+INFO    : Added server entry 98d9bda439 4850 8128 localhost
+
+INFO    : Starting the server
+INFO    : Server will soon be available at http://localhost:8128
+INFO    : Opening browser for target `web` at http://localhost:8128/output/web
+INFO    : Stopping server.
+INFO    : 
+----------------------------------------------------
+INFO    : While running pretext, the following errors occurred:
+
+INFO    : (see log messages above or in the 'logs' folder for more information)
+INFO    : ----------------------------------------------------

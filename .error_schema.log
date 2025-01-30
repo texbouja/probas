@@ -1,0 +1,5 @@
+/media/home/Backup/Dropbox/2024/projects/probas/source/main.ptx:226:0:ERROR:RELAXNGV:RELAXNG_ERR_NOELEM: Expecting an element nbsp, got nothing
+/media/home/Backup/Dropbox/2024/projects/probas/source/main.ptx:36:0:ERROR:RELAXNGV:RELAXNG_ERR_EXTRACONTENT: Element chapter has extra content: section
+/media/home/Backup/Dropbox/2024/projects/probas/source/main.ptx:6:0:ERROR:RELAXNGV:RELAXNG_ERR_ELEMWRONG: Did not expect element frontmatter there
+/media/home/Backup/Dropbox/2024/projects/probas/source/main.ptx:7:0:ERROR:RELAXNGV:RELAXNG_ERR_CONTENTVALID: Element book failed to validate content
+/media/home/Backup/Dropbox/2024/projects/probas/source/main.ptx:3:0:ERROR:RELAXNGV:RELAXNG_ERR_ELEMNAME: Expecting element docinfo, got pretext

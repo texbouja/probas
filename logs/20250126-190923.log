@@ -1,0 +1,26 @@
+INFO    : Since no target was supplied, we will use "web".
+
+INFO    : Building target web
+INFO    : Preparing to build into /media/home/Backup/Dropbox/2024/projects/probas/output/web.
+INFO    : XSL conversion of /media/home/Backup/Dropbox/2024/projects/probas/source/main.ptx by /home/bmint/.ptx/2.12.0/core/xsl/utilities/report-publisher-variables.xsl
+INFO    : successful application of /home/bmint/.ptx/2.12.0/core/xsl/utilities/report-publisher-variables.xsl
+INFO    : discovering source file's directory name: /media/home/Backup/Dropbox/2024/projects/probas/source
+INFO    : verifying and expanding input directory: /media/home/Backup/Dropbox/2024/projects/probas/source/../generated-assets
+INFO    : input directory expanded to absolute path: /media/home/Backup/Dropbox/2024/projects/probas/generated-assets
+INFO    : verifying and expanding input directory: /media/home/Backup/Dropbox/2024/projects/probas/source/../assets
+INFO    : input directory expanded to absolute path: /media/home/Backup/Dropbox/2024/projects/probas/assets
+INFO    : Runestone Services via online CDN query: version 7.5.3
+INFO    : Downloading Runestone Services, version 7.5.3
+INFO    : Extracting Runestone Services from archive file
+INFO    : converting /media/home/Backup/Dropbox/2024/projects/probas/source/main.ptx to HTML in /tmp/ptx-dyoum5bg
+INFO    : XSL conversion of /media/home/Backup/Dropbox/2024/projects/probas/source/main.ptx by /home/bmint/.ptx/2.12.0/core/xsl/pretext-html.xsl
+INFO    : messages from the log for XSL processing:
+INFO    : * PTX:INFO:   checking ONLY the last TWO YEARS of element deprecations.
+Rerun with the string parameter "author.deprecations.all" set to "yes" to check your source against all deprecations.
+INFO    : successful application of /home/bmint/.ptx/2.12.0/core/xsl/pretext-html.xsl
+INFO    : Removing temporary directory /tmp/ptx-o2x8mpdy
+INFO    : Removing temporary directory /tmp/ptx-dyoum5bg
+INFO    : 
+Success! Run `pretext view` to see the results.
+
+INFO    : 

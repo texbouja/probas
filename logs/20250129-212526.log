@@ -1,0 +1,29 @@
+INFO    : Using PreTeXt-CLI version: 2.11.4.  This is the latest available version.
+
+INFO    : PreTeXt project found in `/home/Backup/Dropbox/2024/projects/probas`.
+WARNING : Using CLI version 2.11.4 but project's `requirements.txt`
+WARNING : is configured to use 2.12.0. Consider either installing
+WARNING : CLI version 2.12.0 or running `pretext init --refresh`
+WARNING : to update `requirements.txt` to match 2.11.4.
+INFO    : Since no target was supplied, we will use "web".
+
+INFO    : Building target web
+INFO    : Preparing to build into /home/Backup/Dropbox/2024/projects/probas/output/web.
+INFO    : XSL conversion of /home/Backup/Dropbox/2024/projects/probas/source/main.ptx by /home/mxbouja/.ptx/2.11.4/core/xsl/utilities/report-publisher-variables.xsl
+INFO    : successful application of /home/mxbouja/.ptx/2.11.4/core/xsl/utilities/report-publisher-variables.xsl
+INFO    : discovering source file's directory name: /home/Backup/Dropbox/2024/projects/probas/source
+INFO    : verifying and expanding input directory: /home/Backup/Dropbox/2024/projects/probas/source/../generated-assets
+INFO    : input directory expanded to absolute path: /home/Backup/Dropbox/2024/projects/probas/generated-assets
+INFO    : verifying and expanding input directory: /home/Backup/Dropbox/2024/projects/probas/source/../assets
+INFO    : input directory expanded to absolute path: /home/Backup/Dropbox/2024/projects/probas/assets
+CRITICAL: unable to get Runestone Services from the Runestone CDN.
+This is due to an error reported immediately prior in the log.
+Unable to proceed and build useful HTML output without this.
+INFO    : ------------------------
+CRITICAL: Failed to build.  Exiting...
+INFO    : 
+----------------------------------------------------
+INFO    : While running pretext, the following errors occurred:
+
+INFO    : (see log messages above or in the 'logs' folder for more information)
+INFO    : ----------------------------------------------------

@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="fr-FR" dir="ltr">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Modélisation de phénomènes aléatoires</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Probabilités discrètes">
+<meta property="book:author" content="Sadik Boujaida">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Évaluer (Sage)';
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.5.4';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.596d7408a9995282.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.f6bda0c0ccce4835.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.6a985cbf816db5c7.css">
+<style>
+#sec-tribu-5-1-1 { counter-set: sec-tribu-5-1-1 0; }
+#sec-tribu-5-1-1 > li::marker { content: ""counter(sec-tribu-5-1-1,decimal)"."; }
+#sec-tribu-5-1-1 > li { counter-increment: sec-tribu-5-1-1; }
+#sec-tribu-6-1-1 { counter-set: sec-tribu-6-1-1 0; }
+#sec-tribu-6-1-1 > li::marker { content: ""counter(sec-tribu-6-1-1,decimal)"."; }
+#sec-tribu-6-1-1 > li { counter-increment: sec-tribu-6-1-1; }
+#sec-tribu-8-1-1 { counter-set: sec-tribu-8-1-1 0; }
+#sec-tribu-8-1-1 > li::marker { content: ""counter(sec-tribu-8-1-1,decimal)"."; }
+#sec-tribu-8-1-1 > li { counter-increment: sec-tribu-8-1-1; }
+#prop--1-1-3 { counter-set: prop--1-1-3 0; }
+#prop--1-1-3 > li::marker { content: ""counter(prop--1-1-3,decimal)"."; }
+#prop--1-1-3 > li { counter-increment: prop--1-1-3; }
+#prop--2-1-1 { counter-set: prop--2-1-1 0; }
+#prop--2-1-1 > li::marker { content: ""counter(prop--2-1-1,decimal)"."; }
+#prop--2-1-1 > li { counter-increment: prop--2-1-1; }
+#thm-contmono-2-1-1 { counter-set: thm-contmono-2-1-1 0; }
+#thm-contmono-2-1-1 > li::marker { content: ""counter(thm-contmono-2-1-1,decimal)"."; }
+#thm-contmono-2-1-1 > li { counter-increment: thm-contmono-2-1-1; }
+#thm-contmono-3-1-1 { counter-set: thm-contmono-3-1-1 0; }
+#thm-contmono-3-1-1 > li::marker { content: ""counter(thm-contmono-3-1-1,decimal)"."; }
+#thm-contmono-3-1-1 > li { counter-increment: thm-contmono-3-1-1; }
+#cor-contmono-1-1-3 { counter-set: cor-contmono-1-1-3 0; }
+#cor-contmono-1-1-3 > li::marker { content: ""counter(cor-contmono-1-1-3,decimal)"."; }
+#cor-contmono-1-1-3 > li { counter-increment: cor-contmono-1-1-3; }
+#sec-probabilite-10-2-1-1 { counter-set: sec-probabilite-10-2-1-1 0; }
+#sec-probabilite-10-2-1-1 > li::marker { content: ""counter(sec-probabilite-10-2-1-1,decimal)"."; }
+#sec-probabilite-10-2-1-1 > li { counter-increment: sec-probabilite-10-2-1-1; }
+#sec-probabilite-12-1-1 { counter-set: sec-probabilite-12-1-1 0; }
+#sec-probabilite-12-1-1 > li::marker { content: ""counter(sec-probabilite-12-1-1,decimal)"."; }
+#sec-probabilite-12-1-1 > li { counter-increment: sec-probabilite-12-1-1; }
+#sec-probabilite-13-2-1 { counter-set: sec-probabilite-13-2-1 0; }
+#sec-probabilite-13-2-1 > li::marker { content: ""counter(sec-probabilite-13-2-1,decimal)"."; }
+#sec-probabilite-13-2-1 > li { counter-increment: sec-probabilite-13-2-1; }
+#thm-probadisc-1-1-3 { counter-set: thm-probadisc-1-1-3 0; }
+#thm-probadisc-1-1-3 > li::marker { content: ""counter(thm-probadisc-1-1-3,decimal)"."; }
+#thm-probadisc-1-1-3 > li { counter-increment: thm-probadisc-1-1-3; }
+#sec-probabilite-17-1-1 { counter-set: sec-probabilite-17-1-1 0; }
+#sec-probabilite-17-1-1 > li::marker { content: ""counter(sec-probabilite-17-1-1,decimal)"."; }
+#sec-probabilite-17-1-1 > li { counter-increment: sec-probabilite-17-1-1; }
+#prop-bayes-2-1-1 { counter-set: prop-bayes-2-1-1 0; }
+#prop-bayes-2-1-1 > li::marker { content: ""counter(prop-bayes-2-1-1,decimal)"."; }
+#prop-bayes-2-1-1 > li { counter-increment: prop-bayes-2-1-1; }
+#def-independance-1-1-1 { counter-set: def-independance-1-1-1 0; }
+#def-independance-1-1-1 > li::marker { content: ""counter(def-independance-1-1-1,decimal)"."; }
+#def-independance-1-1-1 > li { counter-increment: def-independance-1-1-1; }
+#sec-independance-5-1-1 { counter-set: sec-independance-5-1-1 0; }
+#sec-independance-5-1-1 > li::marker { content: ""counter(sec-independance-5-1-1,decimal)"."; }
+#sec-independance-5-1-1 > li { counter-increment: sec-independance-5-1-1; }
+#thm--1-1-3 { counter-set: thm--1-1-3 0; }
+#thm--1-1-3 > li::marker { content: ""counter(thm--1-1-3,decimal)"."; }
+#thm--1-1-3 > li { counter-increment: thm--1-1-3; }
+#sec-modelisation-5-1 { counter-set: sec-modelisation-5-1 0; }
+#sec-modelisation-5-1 > li::marker { content: ""counter(sec-modelisation-5-1,decimal)"."; }
+#sec-modelisation-5-1 > li { counter-increment: sec-modelisation-5-1; }
+#exercises-approfondissement-4-2-1-10 { counter-set: exercises-approfondissement-4-2-1-10 0; }
+#exercises-approfondissement-4-2-1-10 > li::marker { content: "("counter(exercises-approfondissement-4-2-1-10,lower-alpha)")"; }
+#exercises-approfondissement-4-2-1-10 > li { counter-increment: exercises-approfondissement-4-2-1-10; }
+#sec-varalea-4-1 { counter-set: sec-varalea-4-1 0; }
+#sec-varalea-4-1 > li::marker { content: ""counter(sec-varalea-4-1,decimal)"."; }
+#sec-varalea-4-1 > li { counter-increment: sec-varalea-4-1; }
+</style>
+</head>
+<body id="MATH12345-Spring2037" class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Sauter au contenu</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" target="_blank" href=""></a><div class="title-container">
+<h1 class="heading"><a href="proba-disc.html"><span class="title">Probabilités discrètes</span></a></h1>
+<p class="byline">Sadik Boujaida</p>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Table des matières"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Table des matières</span></button><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Résultats de la recherche: </h2>
+<div id="searchempty" class="searchempty"><span>Aucun résultat.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="sec-independance.html" title="Précédent"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Précédent</span></a><a class="up-button button" href="ch-generalites.html" title="Haut"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Haut</span></a><a class="next-button button" href="exercises-approfondissement.html" title="Suivant"><span class="name">Suivant</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+\newcommand{\K}{\mathbb K}
+\renewcommand{\Pr}{\mathbb P}
+\newcommand{\Es}{\mathbb E}
+\newcommand{\Va}{\mathbb V}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter"><div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Pages Liminaires</span></a></div></li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="ch-generalites.html" class="internal"><span class="codenumber">1</span> <span class="title">Espaces de probabilité</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-objectifs.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Objectifs d’apprentissage</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-tribu.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Tribus</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-probabilite.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Probabilités</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-independance.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Indépendance des événements</span></a></div></li>
+<li class="toc-item toc-section active"><div class="toc-title-box"><a href="sec-modelisation.html" class="internal"><span class="codenumber">1.5</span> <span class="title">Modélisation de phénomènes aléatoires</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="exercises-approfondissement.html" class="internal"><span class="codenumber">1.6</span> <span class="title">Activités</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-varalea.html" class="internal"><span class="codenumber">2</span> <span class="title">Variables aléatoires discrètes</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-varalea.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Variables aléatoires</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-backmatter"><div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Sommaire</span></a></div></li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-modelisation"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">1.5</span><span class="space"> </span><span class="title">Modélisation de phénomènes aléatoires</span>
+</h2>
+<div class="para" id="sec-modelisation-2">Pour modéliser une expérience aléatoire on se place dans un ensemble <span class="process-math">\(\Omega\)</span> qui contient tous les résultats possibles de l’expérience et on choisi une tribu de <span class="process-math">\(\Omega\)</span> dans laquelle on peut exprimer tous les «événements» qui nous intéressent. Il reste ensuite à définir une probabilité sur cette tribu qui rend compte de la fréquence de réalisation de ces événements.</div>
+<div class="para logical" id="sec-modelisation-3">
+<div class="para">On adopte alors le vocabulaire suivant :</div>
+<ul class="disc" id="sec-modelisation-3-1">
+<li id="sec-modelisation-3-1-1"><div class="para" id="sec-modelisation-3-1-1-1">
+<span class="process-math">\(\Omega\)</span> est dit l’univers de l’expérience ;</div></li>
+<li id="sec-modelisation-3-1-2"><div class="para" id="sec-modelisation-3-1-2-1">pour une instance de l’expérience, un évenement <span class="process-math">\(A\)</span> se réalise si le résultat obtenu est dans <span class="process-math">\(A\)</span> ;</div></li>
+<li id="sec-modelisation-3-1-3"><div class="para" id="sec-modelisation-3-1-3-1">un événement <span class="process-math">\(A\)</span> est dit presque sûr si <span class="process-math">\(\Pr(A)=1\)</span> et négligeable si <span class="process-math">\(\Pr(A)=0\)</span> ;</div></li>
+<li id="sec-modelisation-3-1-4"><div class="para" id="sec-modelisation-3-1-4-1">deux événements <span class="process-math">\(A\)</span> et <span class="process-math">\(B\)</span> sont dits incompatibles si <span class="process-math">\(\Pr(A\cap B)=0\)</span> ;</div></li>
+</ul>
+</div>
+<details id="sec-modelisation-4" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Exemple</span><span class="space"> </span><span class="codenumber">1.5.1</span><span class="period">.</span><span class="space"> </span><span class="title">(signification de certains événements courants).</span>
+</h3></summary><article class="example example-like knowl__content"><div class="para logical" id="sec-modelisation-4-2">
+<div class="para">Soit <span class="process-math">\((A_n)_n\)</span> une suite quelconque d’événements.</div>
+<ul class="disc" id="sec-modelisation-4-2-2">
+<li id="sec-modelisation-4-2-2-1"><div class="para" id="sec-modelisation-4-2-2-1-1">
+<span class="process-math">\(\bigcup\limits_{n\in\N} A_n\)</span> est l’événement «au moins un des événements <span class="process-math">\(A_n\)</span> se réalise» ;</div></li>
+<li id="sec-modelisation-4-2-2-2"><div class="para" id="sec-modelisation-4-2-2-2-1">
+<span class="process-math">\(\bigcap\limits_{n\in\N} A_n\)</span> est l’événement «tous les événements <span class="process-math">\(A_n\)</span> se réalisent» ;</div></li>
+<li id="sec-modelisation-4-2-2-3"><div class="para logical" id="sec-modelisation-4-2-2-3-1">
+<div class="para">
+<span class="process-math">\(U=\bigcup\limits_{n\in\N}\bigg(\bigcap\limits_{k=n}^{\infty} A_k\bigg)\)</span> est l’événement «les événements <span class="process-math">\(A_k\)</span> se réalisent tous à partir d’un certain rang <span class="process-math">\(n\)</span> pour pour au moins un indice <span class="process-math">\(n\)</span>». La probabilité de cet événement est</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\Pr(U)=\lim\limits_{n\to\infty} \Pr\biggl(\bigcap\limits_{k=n}^{\infty} A_k\biggr)=\lim\limits_{n\to\infty}\lim_{m\to\infty} \Pr\left(\bigcap\limits_{k=n}^{n+m} A_k\right)
+\end{equation*}
+</div>
+</div></li>
+<li id="sec-modelisation-4-2-2-4"><div class="para logical" id="sec-modelisation-4-2-2-4-1">
+<div class="para">
+<span class="process-math">\(V=\bigcap\limits_{n\in\N}\bigg(\bigcup\limits_{k=n}^{\infty} A_k\bigg)\)</span> est l’événement «l’événement <span class="process-math">\(A_n\)</span> se réalise pour une infinité d’indices <span class="process-math">\(n\)</span>». La probabilité de cet événement est</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\Pr(V)=1-\Pr\left(\bigcup\limits_{n\in\N}\bigg(\bigcap\limits_{k=n}^{\infty}A_k^c\bigg)\right)=1-\lim\limits_{n\to\infty}\lim_{m\to\infty} \Pr\left(\bigcap\limits_{k=n}^{n+m} A_k^c\right)
+\end{equation*}
+</div>
+</div></li>
+</ul>
+</div></article></details><div class="para logical" id="sec-modelisation-5">
+<div class="para">Deux approches sont en fait possibles pour modéliser une expérience aléatoire :</div>
+<ol class="decimal" id="sec-modelisation-5-1">
+<li id="sec-modelisation-5-1-1"><div class="para" id="sec-modelisation-5-1-1-1">Définir un espace <span class="process-math">\((\Omega,\mathscr T, \Pr)\)</span> où <span class="process-math">\(\Omega\)</span> représente exactement l’ensemble des résultats possibles de l’expérience.</div></li>
+<li id="sec-modelisation-5-1-2"><div class="para" id="sec-modelisation-5-1-2-1">La précédente méthode risque d’être inadéquate si certains événements qui nous intéresse sont inexprimables dans la tribu considérée. C’est pour cela qu’en général on préfère se placer dans un espace probabilisable <span class="process-math">\((\Omega,\mathscr T)\)</span> où <span class="process-math">\(\Omega\)</span> est beaucoup plus large et on modélise l’expérience non pas avec <span class="process-math">\((\Omega,\mathscr T)\)</span> mais avec une application <span class="process-math">\(X\)</span> définie sur <span class="process-math">\(\Omega\)</span> qu’on appellera «variable aléatoire». L’avantage est qu’on peut combiner entre les résultats de différentes expériences aléatoires.</div></li>
+</ol>
+</div>
+<article class="remark remark-like" id="sec-modelisation-6"><h3 class="heading">
+<span class="type">Remarque</span><span class="space"> </span><span class="codenumber">1.5.2</span><span class="period">.</span><span class="space"> </span><span class="title">Cas où l’univers est au plus dénombrable.</span>
+</h3>
+<div class="para" id="sec-modelisation-6-2">Dans la pratique si l’ensemble <span class="process-math">\(\Omega\)</span> qui contient les résultats de l’expérience est au plus plus dénombrable alors on le munit de la tribu <span class="process-math">\(\mathscr T=\mathscr P(\Omega)\)</span> de telle sorte que tout ensemble formé de résultats possibles de l’expérience soit un événement. Ce choix de tribu n’est pas adéquat lorsque l’ensemble des résultats est non dénombrable car cela pose des difficultés insurmontables pour définir une probabilité sur <span class="process-math">\(\mathscr P(\Omega)\text{.}\)</span>
+</div></article><details id="sec-modelisation-7" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Exemple</span><span class="space"> </span><span class="codenumber">1.5.3</span><span class="period">.</span><span class="space"> </span><span class="title">Lancer un dé.</span>
+</h3></summary><article class="example example-like knowl__content"><div class="para" id="sec-modelisation-7-2">On lance un dé à 6 faces. On peut modéliser cette expérience par <span class="process-math">\(\Omega=\{1,2,3,4,5,6\}\)</span> et <span class="process-math">\(\mathscr T=\mathscr P(\Omega)\text{.}\)</span> On peut définir une probabilité sur <span class="process-math">\(\mathscr T\)</span> en posant <span class="process-math">\(\Pr(\{i\})=\frac 16\)</span> pour tout <span class="process-math">\(i\in\Omega\text{.}\)</span>
+</div></article></details><details id="sec-modelisation-8" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Exemple</span><span class="space"> </span><span class="codenumber">1.5.4</span><span class="period">.</span><span class="space"> </span><span class="title">Lancer deux dés.</span>
+</h3></summary><article class="example example-like knowl__content"><div class="para" id="sec-modelisation-8-2">On lance deux dés à 6 faces. On peut modéliser cette expérience par <span class="process-math">\(\Omega=\{1,2,3,4,5,6\}^2\)</span> et <span class="process-math">\(\mathscr T=\mathscr P(\Omega)\text{.}\)</span> On peut définir une probabilité sur <span class="process-math">\(\mathscr T\)</span> en posant <span class="process-math">\(\Pr(\{(i,j)\})=\frac 1{36}\)</span> pour tout <span class="process-math">\((i,j)\in\Omega\text{.}\)</span>
+</div>
+<div class="para logical" id="sec-modelisation-8-3">
+<div class="para">Si on s’intéresse à l’événement <span class="process-math">\(A\)</span> : «la somme des résultats est paire», on peut créer un espace spécifique sous la forme <span class="process-math">\((\Omega=\{0,1\},\mathscr P(\Omega))\)</span> et y adjoindre la probabilité adéquate ou bien on peut rester dans l’univers <span class="process-math">\(\Omega=\{1,2,3,4,5,6\}^2\)</span> et définir la variable aléatoire <span class="process-math">\(X\)</span> sur <span class="process-math">\(\Omega\)</span> en posant <span class="process-math">\(X(i,j)=i+j\)</span> pour tout <span class="process-math">\((i,j)\in\Omega\text{.}\)</span> On peut alors exprimer l’événement <span class="process-math">\(A\)</span> par</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A=\{(i,j)\in\Omega \mid X(i,j) \text{ est paire}\}
+\end{equation*}
+</div>
+</div></article></details><details id="sec-modelisation-9" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Exemple</span><span class="space"> </span><span class="codenumber">1.5.5</span><span class="period">.</span><span class="space"> </span><span class="title">Suite de lancers d’une pièce de monnaie.</span>
+</h3></summary><article class="example example-like knowl__content"><div class="para" id="sec-modelisation-9-2">On lance indéfiniment une piece de monnaie. Si on ne s’intéresse qu’au numéro du premier lancer qui donne «face» alors peut modéliser cette expérience par <span class="process-math">\(\Omega=\N^*\)</span> et <span class="process-math">\(\mathscr T=\mathscr P(\Omega)\text{.}\)</span> On peut définir une probabilité sur <span class="process-math">\(\mathscr T\)</span> en posant <span class="process-math">\(\Pr(\{n\})=\frac 1{2^n}\)</span> pour tout <span class="process-math">\(n\in\N^*\text{.}\)</span>
+</div>
+<div class="para" id="sec-modelisation-9-3">Mais dans ce cas les événements «obtenir trois face successivement au moins une fois» ou «obtenir face une infinité de fois» ne peuvent être exprimés dans <span class="process-math">\(\mathscr T\text{.}\)</span>
+</div>
+<div class="para" id="sec-modelisation-9-4">On peut alors se placer dans l’espace beaucoup plus vaste <span class="process-math">\(\Omega=\{0,1\}^{\N^*}\text{.}\)</span> Le résultat de chaque séquence infinie de lancers est modélisé par une suite de zéros et de uns. C’est un ensemble non dénombrable et y définir une tribu sur laquelle on doit ensuite définir une probabilité est non aisé. L’approche peut être la suivante : on identifie une famille d’événements élémentaires avec lesquels on peut construire d’autre événements plus complexes et qui couvrent nos besoins et on n’aura qu’à se placer dans la tribu engendrée par ces événements élémentaires.</div>
+<div class="para logical" id="sec-modelisation-9-5">
+<div class="para">Par exemple, on peut considérer pour tout <span class="process-math">\(n\in N^*\)</span> l’événement <span class="process-math">\(E_{n}\)</span> : «le <span class="process-math">\(n^{\mathrm{e}}\)</span> lancer donne face», ou encore</div>
+<div class="displaymath process-math">
+\begin{equation*}
+E_n=\{(\omega_p)_{p\in\N^*} \in\{0,1\}^{\N^*} \mid \omega_n=1\}
+\end{equation*}
+</div>
+<div class="para">On peut alors exprimer</div>
+<ul class="disc" id="sec-modelisation-9-5-5">
+<li id="sec-modelisation-9-5-5-1"><div class="para logical" id="sec-modelisation-9-5-5-1-1">
+<div class="para">pour tout <span class="process-math">\(\omega=(\omega_n)_{n\in\N^*}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\{\omega\}=\bigcap_{n\in\N^*} F_n \quad\text{avec } F_n=\begin{cases} E_n \amp \text{si } \omega_n=1\\ E_n^c \amp \text{si } \omega_n=0 \end{cases}
+\end{equation*}
+</div>
+<div class="para">en particulier <span class="process-math">\(\{\infty\}:=\bigcap\limits_{n\in\N^*}E_n^c\)</span> est l’événement «ne jamais obtenir face»</div>
+</div></li>
+<li id="sec-modelisation-9-5-5-2"><div class="para logical" id="sec-modelisation-9-5-5-2-1">
+<div class="para">l’événement «le premier face apparaît au <span class="process-math">\(n^{\mathrm e}\)</span> lancer» par</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A_n=E_1^c\cap \cdots E_{n-1}^c\cap E_n
+\end{equation*}
+</div>
+</div></li>
+<li id="sec-modelisation-9-5-5-3"><div class="para logical" id="sec-modelisation-9-5-5-3-1">
+<div class="para">l’événement «obtenir face une infinité de fois» par</div>
+<div class="displaymath process-math">
+\begin{equation*}
+B=\bigcap_{n\in\N^*}\Bigl(\bigcup_{k\geqslant n} E_k\Bigr)\text{.}
+\end{equation*}
+</div>
+</div></li>
+<li id="sec-modelisation-9-5-5-4"><div class="para logical" id="sec-modelisation-9-5-5-4-1">
+<div class="para">l’événement «obtenir trois faces successivement une infinité de fois» par</div>
+<div class="displaymath process-math">
+\begin{equation*}
+C=\bigcap_{n\in\N^*}\bigcup_{k\geqslant n} \bigl(E_k\cap E_{k+1}\cap E_{k+2}\bigr)
+\end{equation*}
+</div>
+</div></li>
+</ul>
+</div></article></details></section></div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="sec-independance.html" title="Précédent"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Précédent</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="exercises-approfondissement.html" title="Suivant"><span class="name">Suivant</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+</div>
+</body>
+</html>
