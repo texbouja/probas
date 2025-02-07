@@ -74,6 +74,7 @@ window.MathJax = {
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
 <link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
 <!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
@@ -96,85 +97,21 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.5.4';
+eBookConfig.runestone_version = '7.5.6';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.596d7408a9995282.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.f6bda0c0ccce4835.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<script src="_static/prefix-runtime.82032a8574f6ce75.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.f6bda0c0ccce4835.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
 <link rel="stylesheet" type="text/css" href="_static/prefix-runestone.6a985cbf816db5c7.css">
-<style>
-#sec-tribu-5-1-1 { counter-set: sec-tribu-5-1-1 0; }
-#sec-tribu-5-1-1 > li::marker { content: ""counter(sec-tribu-5-1-1,decimal)"."; }
-#sec-tribu-5-1-1 > li { counter-increment: sec-tribu-5-1-1; }
-#sec-tribu-6-1-1 { counter-set: sec-tribu-6-1-1 0; }
-#sec-tribu-6-1-1 > li::marker { content: ""counter(sec-tribu-6-1-1,decimal)"."; }
-#sec-tribu-6-1-1 > li { counter-increment: sec-tribu-6-1-1; }
-#sec-tribu-8-1-1 { counter-set: sec-tribu-8-1-1 0; }
-#sec-tribu-8-1-1 > li::marker { content: ""counter(sec-tribu-8-1-1,decimal)"."; }
-#sec-tribu-8-1-1 > li { counter-increment: sec-tribu-8-1-1; }
-#prop--1-1-3 { counter-set: prop--1-1-3 0; }
-#prop--1-1-3 > li::marker { content: ""counter(prop--1-1-3,decimal)"."; }
-#prop--1-1-3 > li { counter-increment: prop--1-1-3; }
-#prop--2-1-1 { counter-set: prop--2-1-1 0; }
-#prop--2-1-1 > li::marker { content: ""counter(prop--2-1-1,decimal)"."; }
-#prop--2-1-1 > li { counter-increment: prop--2-1-1; }
-#thm-contmono-2-1-1 { counter-set: thm-contmono-2-1-1 0; }
-#thm-contmono-2-1-1 > li::marker { content: ""counter(thm-contmono-2-1-1,decimal)"."; }
-#thm-contmono-2-1-1 > li { counter-increment: thm-contmono-2-1-1; }
-#thm-contmono-3-1-1 { counter-set: thm-contmono-3-1-1 0; }
-#thm-contmono-3-1-1 > li::marker { content: ""counter(thm-contmono-3-1-1,decimal)"."; }
-#thm-contmono-3-1-1 > li { counter-increment: thm-contmono-3-1-1; }
-#cor-contmono-1-1-3 { counter-set: cor-contmono-1-1-3 0; }
-#cor-contmono-1-1-3 > li::marker { content: ""counter(cor-contmono-1-1-3,decimal)"."; }
-#cor-contmono-1-1-3 > li { counter-increment: cor-contmono-1-1-3; }
-#sec-probabilite-10-2-1-1 { counter-set: sec-probabilite-10-2-1-1 0; }
-#sec-probabilite-10-2-1-1 > li::marker { content: ""counter(sec-probabilite-10-2-1-1,decimal)"."; }
-#sec-probabilite-10-2-1-1 > li { counter-increment: sec-probabilite-10-2-1-1; }
-#sec-probabilite-12-1-1 { counter-set: sec-probabilite-12-1-1 0; }
-#sec-probabilite-12-1-1 > li::marker { content: ""counter(sec-probabilite-12-1-1,decimal)"."; }
-#sec-probabilite-12-1-1 > li { counter-increment: sec-probabilite-12-1-1; }
-#sec-probabilite-13-2-1 { counter-set: sec-probabilite-13-2-1 0; }
-#sec-probabilite-13-2-1 > li::marker { content: ""counter(sec-probabilite-13-2-1,decimal)"."; }
-#sec-probabilite-13-2-1 > li { counter-increment: sec-probabilite-13-2-1; }
-#thm-probadisc-1-1-3 { counter-set: thm-probadisc-1-1-3 0; }
-#thm-probadisc-1-1-3 > li::marker { content: ""counter(thm-probadisc-1-1-3,decimal)"."; }
-#thm-probadisc-1-1-3 > li { counter-increment: thm-probadisc-1-1-3; }
-#sec-probabilite-17-1-1 { counter-set: sec-probabilite-17-1-1 0; }
-#sec-probabilite-17-1-1 > li::marker { content: ""counter(sec-probabilite-17-1-1,decimal)"."; }
-#sec-probabilite-17-1-1 > li { counter-increment: sec-probabilite-17-1-1; }
-#prop-bayes-2-1-1 { counter-set: prop-bayes-2-1-1 0; }
-#prop-bayes-2-1-1 > li::marker { content: ""counter(prop-bayes-2-1-1,decimal)"."; }
-#prop-bayes-2-1-1 > li { counter-increment: prop-bayes-2-1-1; }
-#def-independance-1-1-1 { counter-set: def-independance-1-1-1 0; }
-#def-independance-1-1-1 > li::marker { content: ""counter(def-independance-1-1-1,decimal)"."; }
-#def-independance-1-1-1 > li { counter-increment: def-independance-1-1-1; }
-#sec-independance-5-1-1 { counter-set: sec-independance-5-1-1 0; }
-#sec-independance-5-1-1 > li::marker { content: ""counter(sec-independance-5-1-1,decimal)"."; }
-#sec-independance-5-1-1 > li { counter-increment: sec-independance-5-1-1; }
-#thm--1-1-3 { counter-set: thm--1-1-3 0; }
-#thm--1-1-3 > li::marker { content: ""counter(thm--1-1-3,decimal)"."; }
-#thm--1-1-3 > li { counter-increment: thm--1-1-3; }
-#sec-modelisation-5-1 { counter-set: sec-modelisation-5-1 0; }
-#sec-modelisation-5-1 > li::marker { content: ""counter(sec-modelisation-5-1,decimal)"."; }
-#sec-modelisation-5-1 > li { counter-increment: sec-modelisation-5-1; }
-#exercises-approfondissement-4-2-1-10 { counter-set: exercises-approfondissement-4-2-1-10 0; }
-#exercises-approfondissement-4-2-1-10 > li::marker { content: "("counter(exercises-approfondissement-4-2-1-10,lower-alpha)")"; }
-#exercises-approfondissement-4-2-1-10 > li { counter-increment: exercises-approfondissement-4-2-1-10; }
-#sec-varalea-4-1 { counter-set: sec-varalea-4-1 0; }
-#sec-varalea-4-1 > li::marker { content: ""counter(sec-varalea-4-1,decimal)"."; }
-#sec-varalea-4-1 > li { counter-increment: sec-varalea-4-1; }
-</style>
 </head>
 <body id="MATH12345-Spring2037" class="pretext book ignore-math">
-<a class="assistive" href="#ptx-content">Sauter au contenu</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
-<a id="logo-link" class="logo-link" target="_blank" href=""></a><div class="title-container">
+<a class="assistive" href="#ptx-content">Sauter au contenu</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
 <h1 class="heading"><a href="proba-disc.html"><span class="title">Probabilités discrètes</span></a></h1>
 <p class="byline">Sadik Boujaida</p>
-</div>
-</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
 <button class="toc-toggle button" title="Table des matières"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Table des matières</span></button><div class="searchbox">
 <div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
 <div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
@@ -187,7 +124,7 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 </div>
 <span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="sec-objectifs.html" title="Précédent"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Précédent</span></a><a class="up-button button" href="ch-generalites.html" title="Haut"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Haut</span></a><a class="next-button button" href="sec-probabilite.html" title="Suivant"><span class="name">Suivant</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
-</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\require{mathtools}\require{empheq}\newcommand{\N}{\mathbb N}
 \newcommand{\Z}{\mathbb Z}
 \newcommand{\Q}{\mathbb Q}
 \newcommand{\R}{\mathbb R}
@@ -196,6 +133,7 @@ eBookConfig.enable_chatcodes =  false;
 \renewcommand{\Pr}{\mathbb P}
 \newcommand{\Es}{\mathbb E}
 \newcommand{\Va}{\mathbb V}
+\newcommand\Cov{\operatorname{Cov}}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
@@ -218,14 +156,37 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="ch-varalea.html" class="internal"><span class="codenumber">2</span> <span class="title">Variables aléatoires discrètes</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-varalea.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Variables aléatoires</span></a></div></li></ul>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-varalea.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Variables aléatoires</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-indvar.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Indépendance des variables aléatoires discrètes</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-loiusuelles.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Lois usuelles</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-loi-activite.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Activités</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-espvaralea.html" class="internal"><span class="codenumber">3</span> <span class="title">Espérance et moment d’une variable aléatoire discrète</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-esparance.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Esparance d’une variable aléatoire discrète</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-esparance.html#subsec-defprop" class="internal"><span class="codenumber">3.1.1</span> <span class="title">Définition et propriétés</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-esparance.html#subsec-exemple-esperance" class="internal"><span class="codenumber">3.1.2</span> <span class="title">Exemples usuels</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-esparance.html#subsec-activites" class="internal"><span class="codenumber">3.1.3</span> <span class="title">Activités</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-varcovar.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Variance, covariance</span></a></div></li>
+</ul>
 </li>
 <li class="toc-item toc-backmatter"><div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Sommaire</span></a></div></li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-tribu"><h2 class="heading hide-type">
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">1.2</span><span class="space"> </span><span class="title">Tribus</span>
 </h2>
-<div class="para" id="sec-tribu-2">Dans tout le chapitre <span class="process-math">\(\Omega\)</span> désignera un ensemble non vide.</div>
+<div class="para" id="sec-tribu-2">Dans tout le chapitre <span class="process-math">\(\Omega\)</span> désignera un ensemble non vide. <span class="process-math">\(I\)</span> est une ensemble non vide qui sera souvent utilisé comme ensemble d’indices.</div>
+<div class="para" id="sec-tribu-3">On notera <span class="process-math">\(\mathscr P(\Omega)\text{,}\)</span> resp. <span class="process-math">\(\mathscr F(I)\text{,}\)</span> l’ensemble de toutes les parties de <span class="process-math">\(\Omega\text{,}\)</span> resp. l’ensemble de toutes les parties finies de <span class="process-math">\(I\text{.}\)</span>
+</div>
+<div class="para" id="sec-tribu-4">Si <span class="process-math">\(A\)</span> est une partie de <span class="process-math">\(\Omega\)</span> on notera <span class="process-math">\(A^c\)</span> son complémentaire dans <span class="process-math">\(\Omega\text{.}\)</span>
+</div>
 <article class="definition definition-like" id="def-tribu"><h3 class="heading">
 <span class="type">Définition</span><span class="space"> </span><span class="codenumber">1.2.1</span><span class="period">.</span>
 </h3>
@@ -239,48 +200,48 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 <div class="para">Si <span class="process-math">\(\mathscr T\)</span> est une tribu de <span class="process-math">\(\Omega\)</span> alors le couple <span class="process-math">\((\Omega,\mathscr T)\)</span> est dit un espace probabilisable. Tout élément de <span class="process-math">\(\mathscr T\)</span> est dit un événement de l’espace <span class="process-math">\((\Omega,\mathscr T)\text{.}\)</span>
 </div>
-</div></article><article class="remark remark-like" id="sec-tribu-4"><h3 class="heading">
+</div></article><article class="remark remark-like" id="sec-tribu-6"><h3 class="heading">
 <span class="type">Remarque</span><span class="space"> </span><span class="codenumber">1.2.2</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="sec-tribu-4-1">
+<div class="para logical" id="sec-tribu-6-1">
 <div class="para">Si <span class="process-math">\(\mathscr T\)</span> est une tribu de <span class="process-math">\(\Omega\)</span> alors</div>
-<ul class="disc" id="sec-tribu-4-1-3">
-<li id="sec-tribu-4-1-3-1"><div class="para" id="sec-tribu-4-1-3-1-1"><span class="process-math">\(\emptyset \in\mathscr T\text{;}\)</span></div></li>
-<li id="sec-tribu-4-1-3-2"><div class="para" id="sec-tribu-4-1-3-2-1">si <span class="process-math">\((A_n)_{\in \N}\)</span> est une suite d’éléments de <span class="process-math">\(\mathscr T\)</span> alors <span class="process-math">\(\bigcap\limits_{n=1}^\infty A_n \in \mathscr T\text{.}\)</span>
+<ul class="disc" id="sec-tribu-6-1-3">
+<li id="sec-tribu-6-1-3-1"><div class="para" id="sec-tribu-6-1-3-1-1"><span class="process-math">\(\emptyset \in\mathscr T\text{;}\)</span></div></li>
+<li id="sec-tribu-6-1-3-2"><div class="para" id="sec-tribu-6-1-3-2-1">si <span class="process-math">\((A_n)_{\in \N}\)</span> est une suite d’éléments de <span class="process-math">\(\mathscr T\)</span> alors <span class="process-math">\(\bigcap\limits_{n=1}^\infty A_n \in \mathscr T\text{.}\)</span>
 </div></li>
 </ul>
-</div></article><details id="sec-tribu-5" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+</div></article><details id="sec-tribu-7" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
 <span class="type">Exemple</span><span class="space"> </span><span class="codenumber">1.2.3</span><span class="period">.</span>
-</h3></summary><article class="example example-like knowl__content"><div class="para logical" id="sec-tribu-5-1"><ol class="decimal" id="sec-tribu-5-1-1">
-<li id="sec-tribu-5-1-1-1"><div class="para" id="sec-tribu-5-1-1-1-1">
+</h3></summary><article class="example example-like knowl__content"><div class="para logical" id="sec-tribu-7-1"><ol class="decimal" id="sec-tribu-7-1-1">
+<li id="sec-tribu-7-1-1-1"><div class="para" id="sec-tribu-7-1-1-1-1">
 <span class="process-math">\(\mathscr T = \{\emptyset,\Omega\}\)</span> est une tribu de <span class="process-math">\(\Omega\text{.}\)</span> C’est la plus petite tribu de <span class="process-math">\(\Omega\text{.}\)</span>
 </div></li>
-<li id="sec-tribu-5-1-1-2"><div class="para" id="sec-tribu-5-1-1-2-1">
+<li id="sec-tribu-7-1-1-2"><div class="para" id="sec-tribu-7-1-1-2-1">
 <span class="process-math">\(\mathscr P(\Omega)\)</span> est une tribu de <span class="process-math">\(\Omega\text{.}\)</span> C’est la plus grande tribu de <span class="process-math">\(\Omega\text{.}\)</span>
 </div></li>
-<li id="sec-tribu-5-1-1-3"><div class="para" id="sec-tribu-5-1-1-3-1">Si <span class="process-math">\(A\)</span> est une partie de <span class="process-math">\(\Omega\)</span> alors <span class="process-math">\(\{\emptyset,A,A^c,\Omega\}\)</span> est une tribu de <span class="process-math">\(\Omega\text{.}\)</span> C’est la plus petite tribu de <span class="process-math">\(\Omega\)</span> contenant <span class="process-math">\(A\text{.}\)</span>
+<li id="sec-tribu-7-1-1-3"><div class="para" id="sec-tribu-7-1-1-3-1">Si <span class="process-math">\(A\)</span> est une partie de <span class="process-math">\(\Omega\)</span> alors <span class="process-math">\(\{\emptyset,A,A^c,\Omega\}\)</span> est une tribu de <span class="process-math">\(\Omega\text{.}\)</span> C’est la plus petite tribu de <span class="process-math">\(\Omega\)</span> contenant <span class="process-math">\(A\text{.}\)</span>
 </div></li>
-</ol></div></article></details><article class="proposition theorem-like" id="sec-tribu-6"><h3 class="heading">
+</ol></div></article></details><article class="proposition theorem-like" id="sec-tribu-8"><h3 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">1.2.4</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="sec-tribu-6-1"><ol class="decimal" id="sec-tribu-6-1-1">
-<li id="sec-tribu-6-1-1-1"><div class="para" id="sec-tribu-6-1-1-1-1">Si <span class="process-math">\((\mathscr T_i)_{i\in I}\)</span> est une famille de tribus de <span class="process-math">\(\Omega\)</span> alors <span class="process-math">\(\bigcap\limits_{i\in I} \mathscr T_i\)</span> est une tribu de <span class="process-math">\(\Omega\text{.}\)</span>
+<div class="para logical" id="sec-tribu-8-1"><ol class="decimal" id="sec-tribu-8-1-1">
+<li id="sec-tribu-8-1-1-1"><div class="para" id="sec-tribu-8-1-1-1-1">Si <span class="process-math">\((\mathscr T_i)_{i\in I}\)</span> est une famille de tribus de <span class="process-math">\(\Omega\)</span> alors <span class="process-math">\(\bigcap\limits_{i\in I} \mathscr T_i\)</span> est une tribu de <span class="process-math">\(\Omega\text{.}\)</span>
 </div></li>
-<li id="sec-tribu-6-1-1-2"><div class="para" id="sec-tribu-6-1-1-2-1">Soit <span class="process-math">\(\mathcal A\)</span> un ensemble de parties de <span class="process-math">\(\Omega\text{.}\)</span> L’intersection de toutes les tribus de <span class="process-math">\(\Omega\)</span> contenant <span class="process-math">\(\mathcal A\)</span> est une tribu de <span class="process-math">\(\Omega\text{.}\)</span> Elle est appelée la tribu engendrée par <span class="process-math">\(\mathcal A\text{.}\)</span> On la notera <span class="process-math">\(\sigma(\mathcal A)\text{.}\)</span>
+<li id="sec-tribu-8-1-1-2"><div class="para" id="sec-tribu-8-1-1-2-1">Soit <span class="process-math">\(\mathcal A\)</span> un ensemble de parties de <span class="process-math">\(\Omega\text{.}\)</span> L’intersection de toutes les tribus de <span class="process-math">\(\Omega\)</span> contenant <span class="process-math">\(\mathcal A\)</span> est une tribu de <span class="process-math">\(\Omega\text{.}\)</span> Elle est appelée la tribu engendrée par <span class="process-math">\(\mathcal A\text{.}\)</span> On la notera <span class="process-math">\(\sigma(\mathcal A)\text{.}\)</span>
 </div></li>
 </ol></div></article><article class="definition definition-like" id="def-tborel"><h3 class="heading">
 <span class="type">Définition</span><span class="space"> </span><span class="codenumber">1.2.5</span><span class="period">.</span>
 </h3>
 <div class="para" id="def-tborel-1-1">La tribu engendrée par l’ensemble des segments de <span class="process-math">\(\R\)</span> est appelée la tribu de Borel de <span class="process-math">\(\R\text{.}\)</span> On la note <span class="process-math">\(\mathscr B(\R)\text{.}\)</span>
-</div></article><article class="remark remark-like" id="sec-tribu-8"><h3 class="heading">
+</div></article><article class="remark remark-like" id="sec-tribu-10"><h3 class="heading">
 <span class="type">Remarque</span><span class="space"> </span><span class="codenumber">1.2.6</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="sec-tribu-8-1"><ol class="decimal" id="sec-tribu-8-1-1">
-<li id="sec-tribu-8-1-1-1"><div class="para" id="sec-tribu-8-1-1-1-1">Soient <span class="process-math">\(\mathcal A\)</span> et <span class="process-math">\(\mathcal B\)</span> deux ensembles de parties de <span class="process-math">\(\Omega\text{.}\)</span> Si <span class="process-math">\(\mathcal A\subset \mathcal B\subset \sigma(A)\)</span> alors <span class="process-math">\(\sigma(\mathcal A)=\sigma(\mathcal B)\text{.}\)</span>
+<div class="para logical" id="sec-tribu-10-1"><ol class="decimal" id="sec-tribu-10-1-1">
+<li id="sec-tribu-10-1-1-1"><div class="para" id="sec-tribu-10-1-1-1-1">Soient <span class="process-math">\(\mathcal A\)</span> et <span class="process-math">\(\mathcal B\)</span> deux ensembles de parties de <span class="process-math">\(\Omega\text{.}\)</span> Si <span class="process-math">\(\mathcal A\subset \mathcal B\subset \sigma(A)\)</span> alors <span class="process-math">\(\sigma(\mathcal A)=\sigma(\mathcal B)\text{.}\)</span>
 </div></li>
-<li id="sec-tribu-8-1-1-2"><div class="para" id="sec-tribu-8-1-1-2-1">Tout intervalle de <span class="process-math">\(\R\)</span> peut être écrit comme la réunion d’une suite de segments. La tribu de Borel de <span class="process-math">\(\R\)</span> contient donc tous les intervalles de <span class="process-math">\(\R\text{.}\)</span> Comme tout ouvert de <span class="process-math">\(\R\)</span> est une union au plus dénombrable d’intervalles ouverts, la tribu de Borel de <span class="process-math">\(\R\)</span> contient tous les ouverts de <span class="process-math">\(\R\text{.}\)</span> Elle contient donc aussi tous les fermés de <span class="process-math">\(\R\text{.}\)</span>
+<li id="sec-tribu-10-1-1-2"><div class="para" id="sec-tribu-10-1-1-2-1">Tout intervalle de <span class="process-math">\(\R\)</span> peut être écrit comme la réunion d’une suite de segments. La tribu de Borel de <span class="process-math">\(\R\)</span> contient donc tous les intervalles de <span class="process-math">\(\R\text{.}\)</span> Comme tout ouvert de <span class="process-math">\(\R\)</span> est une union au plus dénombrable d’intervalles ouverts, la tribu de Borel de <span class="process-math">\(\R\)</span> contient tous les ouverts de <span class="process-math">\(\R\text{.}\)</span> Elle contient donc aussi tous les fermés de <span class="process-math">\(\R\text{.}\)</span>
 </div></li>
-<li id="sec-tribu-8-1-1-3"><div class="para" id="sec-tribu-8-1-1-3-1">En général si <span class="process-math">\(E\)</span> est un espace vectoriel normé de dimension finie alors la tribu de Borel de <span class="process-math">\(E\text{,}\)</span> notée <span class="process-math">\(\mathscr B(E),\)</span> est par définition la tribu engendrée par les boules fermées de <span class="process-math">\(E\text{.}\)</span> Elle contient alors tous les ouverts et tous les fermés de <span class="process-math">\(E\)</span> et est de ce fait indépendante de la norme choisie sur <span class="process-math">\(E\text{.}\)</span>
+<li id="sec-tribu-10-1-1-3"><div class="para" id="sec-tribu-10-1-1-3-1">En général si <span class="process-math">\(E\)</span> est un espace vectoriel normé de dimension finie alors la tribu de Borel de <span class="process-math">\(E\text{,}\)</span> notée <span class="process-math">\(\mathscr B(E),\)</span> est par définition la tribu engendrée par les boules fermées de <span class="process-math">\(E\text{.}\)</span> Elle contient alors tous les ouverts et tous les fermés de <span class="process-math">\(E\)</span> et est de ce fait indépendante de la norme choisie sur <span class="process-math">\(E\text{.}\)</span>
 </div></li>
 </ol></div></article><article class="proposition theorem-like" id="prop-sigmatrib"><h3 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">1.2.7</span><span class="period">.</span>
@@ -324,10 +285,10 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 <div class="para">Autrement dit la seule tribu de <span class="process-math">\(\Omega\)</span> qui contient tous les singletons de <span class="process-math">\(\Omega\)</span> est <span class="process-math">\(\mathscr P(\Omega)\text{.}\)</span>
 </div>
-</div></article><article class="remark remark-like" id="sec-tribu-11"><h3 class="heading">
+</div></article><article class="remark remark-like" id="sec-tribu-13"><h3 class="heading">
 <span class="type">Remarque</span><span class="space"> </span><span class="codenumber">1.2.9</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="sec-tribu-11-1">
+<div class="para logical" id="sec-tribu-13-1">
 <div class="para">Si <span class="process-math">\(\Omega\)</span> est infini non dénombrable alors la tribu <span class="process-math">\(\mathscr D(\Omega)\)</span> engendrée par les  singletons de <span class="process-math">\(\Omega\)</span> est définie par la condition</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -337,10 +298,10 @@ eBookConfig.enable_chatcodes =  false;
 <div class="para">En particulier toute tribu <span class="process-math">\(\mathscr T\)</span> de <span class="process-math">\(\Omega\)</span> qui contient tous les singletons de <span class="process-math">\(\Omega\)</span> contient <span class="process-math">\(\mathscr D(\Omega)\)</span> et donc contient toutes la parties dénombrables de <span class="process-math">\(\Omega\text{.}\)</span>
 </div>
 </div>
-<div class="para" id="sec-tribu-11-2">C’est le cas par exemple de la tribu de Borel de tout espace vectoriel normé de dimension finie (les singletons sont des boules fermées).</div></article><article class="proposition theorem-like" id="sec-tribu-12"><h3 class="heading">
+<div class="para" id="sec-tribu-13-2">C’est le cas par exemple de la tribu de Borel de tout espace vectoriel normé de dimension finie (les singletons sont des boules fermées).</div></article><article class="proposition theorem-like" id="sec-tribu-14"><h3 class="heading">
 <span class="type">Proposition</span><span class="space"> </span><span class="codenumber">1.2.10</span><span class="period">.</span><span class="space"> </span><span class="title">(tribu induite).</span>
 </h3>
-<div class="para logical" id="sec-tribu-12-2-1">
+<div class="para logical" id="sec-tribu-14-2-1">
 <div class="para">Soit <span class="process-math">\(\mathscr T\)</span> une tribu de <span class="process-math">\(\Omega\text{.}\)</span> Pour toute élément <span class="process-math">\(B\)</span> de <span class="process-math">\(\mathscr T\text{,}\)</span> l’ensemble</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -355,7 +316,7 @@ eBookConfig.enable_chatcodes =  false;
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">
-<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
 </div>
 </body>
 </html>

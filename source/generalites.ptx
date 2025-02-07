@@ -37,7 +37,14 @@
     <title>Tribus</title>
 
     <p>
-      Dans tout le chapitre <m>\Omega</m> désignera un ensemble non vide.
+      Dans tout le chapitre <m>\Omega</m> désignera un ensemble non vide. <m>I</m> est une ensemble non vide qui sera souvent utilisé comme ensemble d'indices.
+    </p>
+
+    <p>
+      On notera <m>\mathscr P(\Omega)</m>, resp. <m>\mathscr F(I)</m>, l'ensemble de toutes les parties de <m>\Omega</m>, resp. l'ensemble de toutes les parties finies de <m>I</m>.
+    </p>
+    <p>
+      Si <m>A</m> est une partie de <m>\Omega</m> on notera <m>A^c</m> son complémentaire dans <m>\Omega</m>. 
     </p>
 
     <definition xml:id="def-tribu">

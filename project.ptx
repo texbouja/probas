@@ -3,7 +3,15 @@
 <project ptx-version="2">
   <targets>
     <target name="web" format="html" />
-    <target name="print" format="pdf" />
+    <target 
+      name="print" 
+      format="pdf"
+    />
+    <target 
+      name="latex" 
+      format="latex" 
+      xsl="custom-latex.xsl"
+    />
   </targets>
 </project>
 

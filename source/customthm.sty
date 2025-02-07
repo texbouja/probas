@@ -1,0 +1,42 @@
+\ProvidesPackage{customthm}
+
+\RequirePackage{libertine}
+\RequirePackage[libertine]{newtxmath}
+
+% Théorème avec tcolorbox
+\newtcolorbox[auto counter, number within=section]{theoremBox}[2][]{%
+  colback=blue!5!white,
+  colframe=blue!75!black,
+  fonttitle=\bfseries,
+  coltitle=black,
+  title={Théorème \thetcbcounter: #2},
+  label=#1,
+  sharp corners=south,
+  drop shadow=black!30,
+}
+
+% Définition avec tcolorbox
+\newtcolorbox[auto counter, number within=section]{definitionBox}[2][]{%
+  colback=yellow!10!white,
+  colframe=orange!80!black,
+  fonttitle=\bfseries,
+  coltitle=black,
+  title={Définition \thetcbcounter: #2},
+  label=#1,
+  sharp corners=south,
+  drop shadow=black!30,
+}
+
+% Corollaire avec tcolorbox
+\newtcolorbox[auto counter, number within=section]{corollaryBox}[2][]{%
+  colback=green!10!white,
+  colframe=green!50!black,
+  fonttitle=\bfseries,
+  coltitle=black,
+  title={Corollaire \thetcbcounter: #2},
+  label=#1,
+  sharp corners=south,
+  drop shadow=black!30,
+}
+
+\endinput

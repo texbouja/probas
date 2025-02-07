@@ -4,6 +4,7 @@
   <!-- we first include a file which contains the docinfo element: -->
   <xi:include href="./docinfo.ptx" />
 
+
   <book xml:id="proba-disc">
     <title>Probabilités discrètes</title>
 
@@ -14,6 +15,8 @@
     <!-- Include chapters -->
     <xi:include href="./generalites.ptx" />
     <xi:include href="./variables_aleatoires.ptx" />
+    <xi:include href="./esperance_et_moments.ptx" />
+
 
     <!-- Include backmatter -->
     <xi:include href="./backmatter.ptx" />
