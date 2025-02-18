@@ -1,0 +1,259 @@
+ <activity xml:id="marche-aleatoire">
+      <title>Marche aléatoire sur une droite</title>
+
+      <statement>
+        <p>
+          Un objet se déplace sur une droite graduée.
+          À chaque instant il ne peut qu'avancer d'un pas avec une probabilité <m>p</m> ou reculer d'un pas avec une probabilité <m>q=1-p</m>.
+          Les déplacements sont tous indépendants.
+        </p>
+
+        <ol>
+          <li>
+            <p>
+              On note <m>X_n</m> la position de l'objet sur la droite  au <m>n^\text{e}</m> pas en supposant qu'il était sur la position d'indice <m>a\in\N</m> de la droite à l'instant <m>0</m>.
+              Quelle est la loi de <m>X_n</m> ?
+            </p>
+          </li>
+
+          <li>
+            <p>
+              On représente chaque parcours de l'objet entre les instants <m>0</m> et <m>n</m> par la ligne brisée passant par les points <m>(k,X_k)</m> et on note <m>C_n(a,b)</m> le nombre de ces lignes qui vont du point <m>(0,a)</m> au point <m>(n,b)</m>.
+              Expliciter <m>C_n(a,b)</m> et exprimer la loi de <m>X_n</m> en fonctions de ces nombres.
+            </p>
+          </li>
+
+          <li>
+            <title>Principe de reflexion</title>
+
+            <p>
+              On suppose que <m>a,b\gt 0</m> et on note <m>C_n^0(a,b)</m> le nombre de parcours entre <m>(0,a)</m> et <m>(n,b)</m> qui passent au moins une fois par un point de la forme <m>(k,0)</m>.
+              Justifier que <m>C_n^0(a,b)=C_n(-a,b)</m>.
+            </p>
+          </li>
+
+          <li>
+            <title>Théorème du scrutin</title>
+
+            <p>
+              On suppose que <m>b\gt 0</m>.
+              Montrer que le nombre de parcours de <m>(0,0)</m> vers <m>(n,b)</m> qui ne reviennent jamais sur l'axe <m>Ox</m> est <m>\frac bnC_n(0,b)</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              En déduire le nombre de parcours de <m>(0,0)</m> vers <m>(2n,0)</m> qui ne touchent pas l'axe <m>Ox</m> avant l'instant <m>2n</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              On suppose que <m>a=0</m> et on note <m>N</m> le numéro du premier pas pour lequel l'objet revient sur l'origine.
+              Quelle est la loi de <m>N</m> ?
+            </p>
+          </li>
+        </ol>
+      </statement>
+
+      <answer>
+        <ol>
+          <li>
+            <p>
+              <m>X_n(\Omega)=[\![-n,n]\!]</m> et <m>\Pr(X_n=k)=\displaystyle \begin{cases} 0 \amp \text{si } k+n \text{ est impaire} \\\displaystyle \binom{n}{\frac{n+k}2} \amp \text{si } k+n \text{ est paire} \end{cases} </m>
+            </p>
+          </li>
+        </ol>
+      </answer>
+
+      <solution>
+        <ol>
+          <li>
+            <p>
+              On note <m>B_k</m> la variable de Bernouilli qui vaut <m>1</m> si l'objet avance d'un pas et <m>0</m> si l'objet recule d'un pas au <m>k^{\text{e}}</m> pas.
+              Alors
+              <me>
+                X_n=a+\sum_{k=1}^n \bigl(2B_k-1\bigr)=2S_n+a-n
+              </me>
+              sachant que la variable <m>S_n=B_1+B_2+\cdots+B_n</m> suit la loi <m>\mathscr B(n,p)</m>.
+              On en déduit que <m>X_n+n-a=2S_n</m> est pair.
+              <m>X_n(\Omega)</m> est ainsi l'ensemble des entiers compris entre <m>a-n</m> et <m>a+n</m> qui ont la même partité que <m>n-a</m> (ou, ce qui revient au même, de même parité que <m>a+n</m>).
+              Pour simplifier on pose <m>X_n(\Omega)=[\![a-n,a+n]\!]</m> sacant que les événements <m>(X_n=k)</m> sont impossibles lorsque <m>k+a+n</m> est impaire.
+              Si <m>k\in X_n(\Omega)</m> alors
+              <md>
+                <mrow> \Pr(S_n=k) \amp= \Pr\Bigl(S_n=\frac{n+k-a}2\Bigr) </mrow>
+                <mrow> \Pr(S_n=k) \amp= \begin{cases} \displaystyle\binom n{\frac{n+k-a}2}p^{\frac{n+k-a}2}q^{n-\frac{n+k-a}2} \amp \text{ si } n+k-a \text{ est paire} \\ 0 \amp \text{ sinon} \end{cases} </mrow>
+              </md>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              La figure suivante illustre un parcours entre les points <m>(0,a)</m> et <m>(n,b)</m> (en ligne continue).
+              <figure xml:id="chemin">
+                <image>
+                  <latex-image>
+              \begin{tikzpicture}
+              \draw [dashed, opacity=.5] (0,-3.5) grid (11.5,3.5) ;
+              \draw [->] (0,0) -- ++(11,0) node [below] {$k$};
+              \draw [->]   (0,-3.5) -- ++(0,7) node [left] {$S_k$};
+              \draw [line width=1pt] (0,1) node [left] {$(0,a)$}  -- 
+              ++(1,1) -- ++(1,1) -- ++(1,-1) -- ++(1,-1) -- ++(1,-1) -- ++(1,-1) -- ++(1,1) -- ++(1,1) -- ++(1,1) -- ++(1,-1)   node [below] {$(n,b)$} ;
+              \draw [line width=1pt, dashed]
+                (0,-1) node [left] {$(0,-a)$} -- ++(1,-1) -- ++(1,-1) -- ++(1,1) -- ++(1,1) -- ++(1,1) ;
+              \fill 
+                (0,1) circle (2pt) 
+                (5,0) node [anchor=south west] {$(k,0)$} circle (2pt)
+                (10,1) circle (2pt);
+              \node at (3,2) [above] {$\mathcal C$} ; 
+              \node at (3,-2) [below] {$\mathcal C'$} ;
+              \end{tikzpicture}
+                  </latex-image>
+                </image>
+              </figure>
+              Chacun de ces chemins peut être représenté par un mot unique de longueur <m>n</m> formé des motifs <c>/</c> et <c>\</c>.
+              Si <m>r</m> désigne le nombre de motifs <c>/</c> et  <m>s</m> celui des motifs <c>\</c>  alors
+              <me>
+                r+s=n \qtext{et} r-s=b-a
+              </me>
+              On déduit que <m>2r=n+b-a</m>.
+              Ce qui implique qu'un chemin entre <m>(0,a)</m> et <m>(n,b)</m> n'est possible que si <m>n</m> est de même parité que <m>b-a</m> et que dans ce cas  <m>r=\ds\frac{n+b-a}2</m>.
+              Le nombre de ces chemins est donc
+              <me>
+                C_n(a,b)=\begin{cases} \displaystyle\binom n{\frac{n+b-a}2} \amp \text{ si } n+b-a \text{ est paire} \\ 0 \amp \text{ si } n+b-a \text{ est impaire} \end{cases}
+              </me>
+              De cette façon  on peut écrire
+              <me>
+                \forall k\in X_n(\Omega),\; \Pr(X_n=k)= C_n(a,k)p^{\frac{n+k-a}2}q^{\frac{n-k+a}2}
+              </me>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Pour chaque chemin <m>\mathcal C</m> allant de <m>(0,a)</m> vers <m>(n,b)</m> et touchant au moins une fois l'axe <m>Ox</m>, il existe exactement un seul chemin <m>C'</m> allant de <m>(0,-a)</m> vers <m>(b,n)</m> qui est symétrique par rapport à l'axe <m>Ox</m> entre les instants <m>0</m> et <m>k</m> et qui rejoint le chemin <m>\mathcal C</m> à partir de l'instant <m>k</m>, <m>k</m> étant le premier instant où le chemin <m>C</m> touche l'axe <m>Ox</m>.
+              On dira que <m>\mathcal C'</m> est le symétrique de <m>\mathcal C'</m>.
+              Réciproquement chaque chemin <m>\mathcal C'</m> qui va de <m>(0,-a)</m> vers <m>(n,b)</m> doit toucher l'axe <m>Ox</m> au moins une fois et est le symétrique d'un chemin <m>\mathcal C</m> qui va de <m>(0,a)</m> vers <m>(n,b)</m>.
+              Ce qui établit une bijection entre l'ensemble des chemins <m>\mathcal C</m> et celui des chemins <m>\mathcal C'</m>.
+              Ce deuxième ensemble est celui de tous les chemins de <m>(0,-a)</m> vers <m>(n,b)</m> donc
+              <me>
+                C_n^0(a,b)=C_n(-a,b)
+              </me>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Sachant que <m>b\gt 0</m> un chemin partant de <m>(0,0)</m> vers <m>(n,b)</m> sans revenir vers l'axe <m>Ox</m> est complétement identifié par sa portion allant de <m>(1,1)</m> vers <m>(n,b)</m> et qui ne touche jamais l'axe <m>Ox</m>.
+              Si <m>n+b</m> est pair, en posant <m>r=\frac{n+b}2</m>, leur nombre est donné par :
+              <md>
+                <mrow>  u_n(b):=C_{n-1}(1,b)-C_{n-1}^0(1,b) \amp= C_{n-1}(1,b)-C_{n-1}(-1,b) </mrow>
+                <mrow> \amp=\binom{n-1}{\frac{n+b-2}2}-\binom{n-1}{\frac{n+b}2}  </mrow>
+                <mrow> \amp= \binom {n-1}{r-1}-\binom{n-1}{r} </mrow>
+                <mrow> \amp=\binom{r}{n}\left(\frac nr-\frac{n-r}{n}\right)  </mrow>
+                <mrow> \amp=\frac{2r-n}{n}\binom{n}{r} </mrow>
+                <mrow> u_n(b)\amp=\frac bn C_n(0,b) </mrow>
+              </md>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Notons <m>v_n</m> le nombre de ces chemins. Ce nombre est celui des chemins qui vont de <m>(0,0)</m> à <m>(2n-1,1)</m> ou bien de <m>(0,0)</m> vers <m>(2n-1,-1)</m> sans revenir sur l'axe <m>Ox</m>. Par symétrie le nombre de parcours dans la deuxième catégorie est le même que celui dans la première.  Donc  
+              <me>v_n=2U_{2n-1}(1)=\frac2{2n-1}C_{2n-1}(0,1)=\frac2{2n-1}\binom{2n-1}{n}</me>
+              qu'on peut réecrire, en constatant que <m>\binom{2n-1}{n}=\frac12\binom{2n}{n}</m>, sous la forme
+              <me>
+                v_n=\frac1{2n-1}\binom{2n}{n}
+              </me>
+               
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>N</m> est le temps d'attente du premier retour vers l'origine de la droite graduée sachant qu'à l'instant <m>0</m> se trouvait sur l'origine. Il peut être potentiellement infini si ce tel passage ne se produit jamais. On peut donc poser <m>N(\Omega)=\N*\cup\{\infty\}</m>. Soit <m>n\in\N^*</m>. Le nombre de parcours entre <m>(0,0)</m> et <m>(2n,0)</m> avec <m>S_k\ne0</m> pour <m>1\lt k\lt 2n</m> est <m>v_n</m>.
+              La probabilité de réalisation individuelle de chacun de ces parcours est <m>(pq)^n</m> donc
+              <me>
+                \Pr(N=2n)=(pq)^nv_n=\binom{2n}n  \frac{(pq)^n}{2n-1}
+              </me>
+              Il reste à calculer <m>\Pr(N=\infty)</m>. On a
+              <me>
+                \Pr(N=\infty)=1-\sum_{n=1}^\infty\Pr(N=2n)=1-\sum_{n=1}^\infty\binom{2n}n  \frac{(pq)^n}{2n-1}
+              </me>
+              Rappelons le DSE suivant :
+              <me>
+                \forall t\in]-1,1[,\; \frac{1}{\sqrt{1-t^2}}=\sum_{n=0}^\infty
+                \frac{\binom{2n}n}{2^{2n}} t^{2n}
+              </me>
+              Posons <m>x=2\sqrt{pq}</m>. On a <m>pq=p(1-p)\leqslant 1/4</m> avec égalité si et seulement si <m>p=q=1/2</m>. D'où <m>x\in[0,1]</m>. 
+              <md>
+                <mrow>\Pr(N=\infty) \amp=1-\sum_{n=1}^\infty\binom{2n}n  \frac{(pq)^n}{2n-1}  </mrow>
+                <mrow> \amp= 1-\sum_{n=1}^\infty\frac{\binom{2n}n}{2^{2n}} \frac{x^{2n}}{2n-1}   </mrow>
+                <mrow> \amp=
+                1-x\int_0^x \sum_{n=1}^\infty \frac{\binom{2n}n}{2^{2n}} t^{2n-2} dt  </mrow>
+                <mrow> \amp= 
+                1-x\int_0^x \left(\frac1{\sqrt{1-t^2}}-1\right) \frac{dt}{t^2}  </mrow>
+                <mrow> \amp
+                \overset{t=x/u}= 1-\int_1^\infty \left(\frac{1}{\sqrt{1-x^2/u^2}}-1\right)du   </mrow>
+                <mrow> \amp=1-\lim_{U\to+\infty}\int_1^U\left(\frac u{\sqrt{u^2-x^2}}-1\right)du </mrow>
+                <mrow> \amp=
+                1-\lim_{U\to\infty}\left(\sqrt{U^2-x^2}-U\right)+\left(\sqrt{1-x^2}-1\right)   </mrow>
+                <mrow> \amp= 
+                \sqrt{1-x^2}-\lim_{U\to\infty}U\left(\sqrt{1-x^2/U^2}-1\right)  
+                </mrow>
+                <mrow> \amp= \sqrt{1-x^2}   </mrow>
+              </md>
+              En conclusion 
+              <me>
+                \Pr(N=\infty) = \sqrt{1-4pq}
+              </me>
+              On note que la probabilité de l'evénement <m>(N=\infty)</m> n'est nulle que si <m>p=q=1/2</m>.
+              
+              
+            </p>
+          </li>
+        </ol>
+      </solution>
+    </activity>
+
+    <activity>
+      <title>Comportement asymptotique d'une loi binomiale</title>
+
+      <statement>
+        <p>
+          On considère une suite <m>(p_n)_{n\in\N^*}</m> de nombres réels de <m>[0,1]</m> et on suppose que <m>np_n\longrightarrow \lambda\in\R^*</m>.
+          Soit pour tout <m>n\in\N^*</m> une variable aléatoire <m>X_n</m> qui suit la loi <m>\mathscr B(n,p_n)</m>.
+          Déterminer pour tout entier <m>k</m> fixé, la limite de <m>\Pr(X_n=k)</m> et donner une interprétation du résultat obtenu.
+        </p>
+      </statement>
+
+      <solution>
+        <p>
+          Fixons <m>k\in\N</m> et considérons un entier <m>n\geqslant k</m>.
+          <me>
+            \Pr(X_n=k)=\binom nk p_n^k(1-p_n)^{n-k}= \frac1{k!}n(n-1)\cdots(n-k+1)p_n^k(1-p_n)^{n-k}
+          </me>
+          <m>p_n\sim\lambda/n</m> donc <m>(1-p_n)^k\longrightarrow 1</m> et donc <m>(1-p_n)^{n-k}\sim (1-p_n)^n</m>.
+          <md>
+            <mrow> (1-p_n)^n \amp= \exp\Bigl(n\ln(1-p_n)\Bigr) </mrow>
+            <mrow> \amp= \exp\Bigl(n\ln\bigl(1-\lambda/n+o(1/n)\bigl)\Bigr) </mrow>
+            <mrow> \amp= \exp\Bigl(n\bigl(-\lambda/n+o(1/n)\bigr)\Bigr) </mrow>
+            <mrow>(1-p_n)^n \amp\longrightarrow e^{-\lambda} </mrow>
+          </md>
+          D'un autre côté, puisque <m>k</m> est fixé alors
+          <me>
+            n(n-1)\cdots (n-k+1)p_n^k\sim (np_n)^k\longrightarrow \lambda^k
+          </me>
+          Ainsi <m> \Pr(X_n=k)\longrightarrow \frac{\lambda^k}{k!}e^{-\lambda} </m>, ou encore
+          <me>
+            \forall k\in\N^*,\; \Pr(X_n=k)\longrightarrow \Pr(X=k)
+          </me>
+          où <m>X</m> est une variable aléatoire qui suit la loi <m>\mathscr P(\lambda)</m>.
+          On dit que la suite <m>(X_n)_n</m> <term>converge en loi</term>  vers <m>X</m>.
+        </p>
+
+        <p>
+          Ainsi, une variable aléatoire binomiale de paramètres <m>n,p</m> se comporte lorsque <m>n</m> est grand comme une loi de Poisson de paramètre <m>\lambda\approx np</m>.
+        </p>
+      </solution>
+    </activity>

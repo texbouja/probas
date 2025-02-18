@@ -1,0 +1,526 @@
+% !TEX root = master.tex
+
+\def\TR{\mathcal T}
+\def\PO{\mathcal P(\Omega)}
+\def\OTR{(\Omega,\TR)}
+
+\def\bltsi{{\color{tcbcolbacktitle}\bullet\;}}
+\def\bltalors{{\color{tcbcolbacktitle}\diamond\;}}
+
+\def\bfone{\OPN{\mathbf 1}}
+
+
+
+
+\begin{exercise}[title=Une caractérisation de la loi de Poisson] 
+On considère une variable aléatoire discrète $N$ sur l'espace probabilisé $(\Omega, \mathcal{A}, \PP)$ telle que $N(\Omega)=\N$ et $\PP(N=n) \neq 0$ pour tout $n \in \N$. Si la variable aléatoire $N$ prend la valeur $n$, on procède à une succession de $n$ épreuves de Bernoulli indépendantes de paramètre $p \in] 0,1[$. On note $S$ et $E$ les variables aléatoires représentant respectivement le nombre de succès et d'échecs dans ces $n$ épreuves.
+\question+ Montrer que si $N$ suit une loi de Poisson de paramètre $\lambda>0$, les variables $S$ et $E$ suivent aussi des lois de Poisson dont on déterminera les paramètres. Montrer que les variables $E$ et $S$ sont indépendantes.
+\question Montrer réciproquement que si $S$ et $E$ sont indépendantes, alors $N$ suit une loi de Poisson. Pour cela, on montrera :
+\question+ qu'il existe deux suites $\left(u_{n}\right)_{n \in \N}$ et $\left(v_{n}\right)_{n \in \N}$ telles que :
+\begin{equation*}
+\forall(m, n) \in \N^{2} \quad(m+n) ! \PP(N=m+n)=u_{m} v_{n}
+\end{equation*}
+\question que les suites $\left(u_{n}\right)_{n \in \N}$ et $\left(v_{n}\right)_{n \in \N}$ sont géométriques.
+\endquestions 
+\end{exercise}
+
+\begin{exercise}
+On lance une pièce de monnaie jusqu'à l'obtention du premier pile, la probabilité d'obtenir pile étant $p \in] 0,1[$. Soit $N$ la variable aléatoire représentant le nombre de lancers nécessaire. Si $N=n$ on relance ensuite $n$ fois la pièce et on appelle $X$ la variable aléatoire représentant le nombre de piles obtenu.
+\question+ Déterminer la loi de $N$ celle du couple $(N, X)$ puis la loi de $X$.
+\question Montrer que $X$ a même loi que le produit de deux variables indépendantes $Y$ et $Z$ telles que $Y$ suive une loi de Bernoulli et $Z$ une loi géométrique de même paramètre.
+\question En déduire l'espérance et la variance de $X$.
+\endquestions 
+\end{exercise}
+
+
+\begin{exercise} Soit $\mathcal{P}$ l'ensemble des nombres premiers. Soit $X$ une variable aléatoire à valeurs dans $\N^{*}$ dont la loi est définie par :
+\begin{equation*}
+\forall n \in \N^{*} \quad \PP(X=n)=\frac{n^{-s}}{\zeta(s)}
+\end{equation*}
+\question+ Justifier qu'on définit bien ainsi la loi d'une variable aléatoire.
+\question Pour tout $n \in \N^{*}$ on considère $A_{n}:$  \og $n$ divise $X$\fg. Montrer que $\left(A_{p}\right)_{p \in \mathcal{P}}$ est une famille d'événements indépendants. En déduire une preuve  de :
+\begin{equation*}
+\prod_{p \in \mathcal{P}}\left(1-\frac{1}{p^{s}}\right)=\frac{1}{\zeta(s)}
+\end{equation*}
+\question Montrer que la probabilité qu'aucun carré différent de 1 ne divise $X$ vaut $\frac{1}{\zeta(2 s)}$.
+\endquestions 
+\end{exercise}
+
+
+\begin{exercise}[title=Taux de panne] 
+Soit  $X$ une variable aléatoire discrète à valeurs dans $\N^{*}$ vérifiant:
+\begin{equation*}
+\forall n \in \N^{*} \quad \PP(X \geqslant n)>0
+\end{equation*}
+On appelle taux de panne associé à $X$ la suite réelle $\left(x_{n}\right)_{n \in \N^{*}}$ définie par :
+\begin{equation*}
+\forall n \in \N^{*} \quad x_{n}=\PP(X=n \mid X \geqslant n)
+\end{equation*}
+\question+ Exprimer $p_{n}=\PP(X=n)$ en fonction des $x_{k}$.
+\question \question+ Montrer que $0 \leqslant x_{n}<1$ pour tout $n \in \N^{*}$ et que la série de terme général $x_{n}$ diverge.
+\question Réciproquement, soit $\left(x_{n}\right)_{n \in \N^{*}}$ une suite à valeur dans $[0,1[$ telle que la série de terme général $x_{n}$ diverge. Montrer qu'il existe une variable aléatoire dont le taux de panne est la suite $\left(x_{n}\right)$.
+\question- Montrer que la variable $X$ suit une loi géométrique si, et seulement si, son taux de panne est constant.
+\endquestions 
+\end{exercise}
+
+\begin{exercise}
+ Soit $n \in \N^{*}$. On désigne par $\Omega$ l'ensemble des permutations de $\llbracket 1, n \rrbracket $. On munit $\Omega$ de la probabilité uniforme. Pour $\sigma \in \Omega$ et $i \in \llbracket 1, n \rrbracket$ on dit que $\sigma(i)$ est un maximum (resp. minimum) provisoire de $\sigma$ si :
+\begin{equation*}\aligned
+\sigma(i) &= \max (\sigma(1), \sigma(2), \ldots, \sigma(i)) \\
+\text { resp. }\quad \sigma(i)&=\min (\sigma(1), \sigma(2), \ldots, \sigma(i))
+\endaligned
+\end{equation*}
+On désigne par $X_{n}$ (resp. $Y_{n}$ ) les variables aléatoires représentant le nombre de maximums (resp. minimums) provisoires des permutations de $\llbracket 1, n \rrbracket$.
+\question+ Montrer que les variables $X_{n}$ et $Y_{n}$ ont même loi.
+\question\question+  Déterminer la loi de $X_{3}$, son espérance et sa variance.
+\question Déterminer la loi du couple $\left(X_{3}, Y_{3}\right)$ et sa covariance.
+\question- Pour $n \in \N^{*}$, on note $g_{n}$ la fonction génératrice de $X_{n}$.
+\question+ Pour $1 \leqslant k \leqslant n$ on note $Z_{k}$ la variable indicatrice de l'événement « $\sigma(k)$ est un maximum ». Montrer que les variables $Z_{1}, Z_{2}, \ldots, Z_{n}$ sont indépendantes.
+\question Exprimer $X_{n}$ en fonction de $Z_{1}, Z_{2}, \ldots, Z_{n} $. En déduire $g_{n}$.
+\question En déduire $\PP\left(X_{n}=1\right), \PP\left(X_{n}=2\right), \PP\left(X_{n}=n\right)$.
+\question Déterminer $\ES\left(X_{n}\right)$ et $\VA\left(X_{n}\right)$ (sous forme de sommes) et un équivalent de $\ES\left(X_{n}\right)$ et de $\VA\left(X_{n}\right)$ quand $n$ tend vers $+\infty$
+\endquestions 
+\end{exercise}
+
+\begin{exercise}[title=Formule du crible]
+\question+ Soit $A_{1}, A_{2}, \ldots, A_{n}$ des événements d'un espace probabilisé $(\Omega, \mathcal{A}, \PP)$. Montrer que $1_{\bigcup_{i=1}^{n} A_{i}}=1-\prod_{i=1}^{n}\left(1-\mathbf{1}_{A_{i}}\right) $. En déduire la formule du crible :
+\begin{equation*}
+\PP\Big(\bigcup_{i=1}^{n} A_{i}\Big)=\sum_{k=1}^{n}\bigg((-1)^{k-1} \sum_{I \subset[1, n] \atop \card I=k} \PP\Big(\bigcap_{i \in I} A_{I}\Big)\bigg)
+\end{equation*}
+\question Soient $n \in \N^{*}$ et $\left(X_{k}\right)_{k \in \N^{*}}$ une suite de variables indépendantes d'un espace probabilisé $(\Omega, \mathcal{A}, \PP)$ suivant toutes la loi uniforme sur $\llbracket 1, n \rrbracket $. On note $X$ la variable aléatoire égale au nombre de tirages nécessaires pour obtenir tous les numéros entre 1 et $n$ au moins une fois (et à $+\infty$ si on n'obtient jamais les $n$ numéros). Pour $j \in \llbracket 1, n \rrbracket$ et $m \in \N$ on note $B_{j, m}$ l'événement : « au bout de $m$ tirages, le numéro $j$ n'est pas encore apparu ».
+\question+ Calculer $\PP\left(B_{j_{1}, m} \cap B_{j_{2}, m} \cap \cdots \cap B_{j_{k}, m}\right)$ où $j_{1}, j_{2}, \ldots, j_{k}$ sont des indices
+distincts compris entre 1 et $n$.
+\question \formule[En déduire que]{$
+\PP(X>m)=\sum_{k=1}^{n}(-1)^{k-1}\binom nk\Big(\frac{n-k}{n}\Big)^{m}
+$}
+Calculer $\ds\lim _{m \rightarrow+\infty} \PP(X>m)$. Interpréter.
+\question Montrer que 
+$\ds\ES(X)=n \sum_{k=1}^{n}(-1)^{k-1} \frac{\binom nk}{k}$. 
+%en utilisant l'exercice 18 de la page 911
+\question Montrer que $\ES(X)=n\left(1+\frac{1}{2}+\cdots+\frac{1}{n}\right) $. En déduire un équivalent de $\ES(X)$ quand $n$ tend vers $+\infty$.
+\endquestions 
+\end{exercise}
+
+\begin{exercise}
+ Soient un entier $n \geqslant 1$ et une suite $\left(U_{k}\right)_{k \in \N^{*}}$  de variables aléatoires indépendantes et de même loi uniforme sur $\llbracket 1, n \rrbracket$. Pour tout $i \in \llbracket 1, n \rrbracket$ on définit:
+\begin{equation*}\aligned
+X_{i}^{(0)} &= 0 &&&
+X_{i}^{(m)}&=\card\left\{k \in \llbracket 1, m \rrbracket \mid U_{k}=i\right\} \quad \forall m\geq1 
+\endaligned
+\end{equation*}
+\question+ Quelle est la loi de $X_{i}^{(m)}$ pour $i \in \llbracket 1, n \rrbracket$ et $m \geqslant 1 ?$
+\question Soit $m \geqslant 1$ et $(i, j) \in \llbracket 1, n \rrbracket^{2}$ avec $i \neq j $. Calculer la covariance des variables aléatoires $X_{i}^{(m)}$ et $X_{j}^{(m)}$. Sont-elles indépendantes?
+\question Soit $\lambda>0$ et $N$ une variable aléatoire suivant une loi de Poisson de paramètre $\lambda$, indépendante des variables $U_{k}$. On pose
+\begin{equation*}
+\forall i \in \llbracket 1, n \rrbracket \quad Y_{i}=X_{i}^{(N)}
+\end{equation*}
+\question+ Déterminer, en fonction de $\lambda$ et $n$ la loi de $Y_{i}$ pour tout $i \in \llbracket 1, n \rrbracket$
+\question Déterminer la loi conjointe de $\left(Y_{1}, \ldots, Y_{n}\right)$.
+\endquestions 
+\end{exercise}
+
+\begin{exercise}[title=Centrale 2015] 
+Soit $(\Omega, \mathcal{A}, \PP)$ un espace probabilisé et $\left(E_{n}\right)_{n \in \N} \in \mathcal{A}^{\N}$ une suite d'événements. On suppose que $\sum_{n=0}^{+\infty} \PP\left(E_{n}\right)<+\infty$ c'est-à-dire que la série converge.
+\question+ On note $1_{X}$ la fonction indicatrice d'un ensemble $X $. Soit $Z=\sum_{n=0}^{+\infty} 1_{E_{n}}$ (on convient que $Z=+\infty$ si la série diverge). Prouver que $Z$ est une variable aléatoire discrète.
+\question Soit $F=\left\{\omega \in \Omega \mid \omega\text{ appartient à un nombre fini de $E_{n}$}\right\}$. Prouver que $F$ est un événement et que $\PP(F)=1$.
+\question Prouver que $Z$ est d'espérance finie.
+\endquestions 
+\end{exercise}
+
+
+\begin{exercise}
+Une action vaut initialement 1 euro. À chaque instant $n \geqslant 1$, sa valeur est multipliée par une quantité aléatoire $Z_{n} $. On suppose que les variables $Z_{n}$ sont indépendantes et de même loi, telles que :
+\begin{equation*}
+\PP\left(Z_{n}=1+a\right)=\PP\left(Z_{n}=1-a\right)=1 / 2, \quad \text{avec}\quad a \in]0,1[
+\end{equation*}
+On note $X_{n}$ la valeur de l'action à l'instant $n$. On pose $Y_{k}=\ln \left(Z_{k}\right)$ et l'on définit, pour tout entier naturel non nul $n$ la variable :
+\begin{equation*}
+\widehat{Y}_{n}=\frac{Y_{1}+\cdots+Y_{n}}{n}
+\end{equation*}
+\question+ Montrer que, pour tout $n \geqslant 0$ on a $\ES\left(X_{n}\right)=1$.
+\question Calculer la limite de $\VA\left(X_{n}\right)$ quand $n$ tend vers l'infini?
+\question Montrer qu'il existe $\delta>0$ tel que
+$\ds\lim _{n \rightarrow+\infty} \PP\left(\widehat{Y}_{n}>-\delta\right)=0$
+\question En déduire que pour tout $\varepsilon>0$,
+$\ds\lim _{n \rightarrow+\infty} \PP\left(X_{n}>\varepsilon\right)=0$
+\endquestions 
+\end{exercise}
+
+\begin{exercise}[title=Centrale 2015]
+On dispose de $n$ urnes et de $N=n a$ boules, où $a$ et $n$ sont des entiers naturels non nuls. Ces boules sont réparties de façon indépendante et équiprobable entre les urnes. On nomme $Y_{n}$ la variable aléatoire donnant le nombre d'urnes vides et $S_{n}=\frac{Y_{n}}{n}$.
+\question+ Énoncer et démontrer l'inégalité de Bienaymé-Tchebychev.
+\question Calculer $\ES\left(S_{n}\right)$ et $\VA\left(S_{n}\right)$.
+\question 
+\begin{equation*}[Montrer :]
+\forall \varepsilon>0 \quad \lim _{n \rightarrow+\infty} \PP\left(\left|S_{n}-e^{-a}\right| \geqslant \varepsilon\right)=0
+\end{equation*}
+\endquestions 
+\end{exercise}
+
+
+\begin{exercise}[title=Modèle de Galton-Watson]
+On observe des virus qui se reproduisent tous selon la même loi avant de mourir : un virus donne naissance en une journée à $X$ virus, où $X$ est une variable aléatoire à valeurs dans $\N$. Pour tout $k \in \N$ on note $\PP(X=k)=p_{k} $. On suppose $p_{1}>0$ et $p_{0}+p_{1}<1 $. On note $f$ la fonction génératrice de $X$. On part au jour zéro de $X_{0}=1$ virus. Au premier jour, on a donc $X_{1}$ virus, où $X_{1}$ suit la loi de $X ;$ chacun de ces $X_{1}$ virus évolue alors indépendamment des autres virus et se reproduit selon la même loi avant de mourir : cela conduit à avoir $X_{2}$ virus au deuxième jour; et le processus continue de la sorte. On note $u_{n}=\PP\left(X_{n}=0\right)$.
+\question+ Calculer $u_{0}, u_{1}$.
+\question Montrer que la suite $\left(u_{n}\right)_{n \in \N}$ est convergente.
+\question Montrer que pour tout entier $n \geqslant 0$, on a $u_{n+1}=f\left(u_{n}\right)$.
+\question Que peut-on dire de la limite de $\left(u_{n}\right)_{n \in \N}$. Discuter selon la valeur de $\ES(X)$. Interpréter le résultat.
+\endquestions 
+\end{exercise}
+
+
+\begin{exercise}[title=Somme aléatoire de variables aléatoires]
+Soit $\left(X_{n}\right)_{n} \geqslant 1$ une suite de variables aléatoires réelles discrètes, toutes de même loi, et $N$ une variable aléatoires à valeurs dans IN. On suppose que $N$ et les variables $X_{n}$ pour $n \in \N^{*}$ forment une suite de variables aléatoires indépendantes. On pose :
+\begin{equation*}
+\forall n \in \N^{*} \quad S_{n}=\sum_{k=1}^{n} X_{k} \quad \text { et } \quad S_{0}=0
+\end{equation*}
+\question+ Montrer que $S_{N}$ est une variable aléatoire.
+\question\question+ Déterminer la loi de $S_{N}$ lorsque les $X_{k}$ suivent la loi de Bernoulli de paramètre $p$ et $N$ la loi de Poisson de paramètre $\lambda$.
+\question Déterminer la loi de $S_{N}$ lorsque les $X_{k}$ suivent la loi géométrique de paramètre $p$ et $N$ la loi géométrique de paramètre $p^{\prime}$.
+\question- On suppose que les variables aléatoires $X_{n}$ sont à valeurs dans IN.
+\question+ Montrer que $G_{S_{N}}=G_{N} \circ G_{X_{1}}$ sur [0,1] .
+\question Montrer que, si $X_{1}$ et $N$ sont d'espérance finie, alors $S_{N}$ est d'espérance finie et vérifie la première formule de Wald:
+\begin{equation*}
+\ES\left(S_{N}\right)=\ES\left(X_{1}\right) \ES(N)
+\end{equation*}
+\question Montrer que, si $X_{1}$ et $N$ possèdent un moment d'ordre $2$ alors $S_{N}$ possède aussi un moment d'ordre 2 et vérifie la seconde formule de Wald :
+\begin{equation*}
+\VA\left(S_{N}\right)=\VA\left(X_{1}\right) \ES(N)+\left(\ES\left(X_{1}\right)\right)^{2} \VA(N)
+\end{equation*}
+\question- On revient au cas général. On suppose que $X_{1}$ et $N$ sont d'espérance finie.
+\question+ Démontrer que la famille $\left(x \PP\left(S_{n}=x\right) \PP(N=n)\right)_{(x, n) \in S_{N}(\Omega) \times N(\Omega)}$ est sommable.
+\question En déduire que $S_{N}$ est d'espérance finie et
+$\ES\left(S_{N}\right)=\ES\left(X_{1}\right) \ES(N)$
+\endquestions 
+\end{exercise}
+
+
+\begin{exercise}
+On considère une suite d'épreuves de Bernoulli indépendantes. À chaque épreuve, la probabilité de succès est $p \in] 0,1[$. On se donne un entier $r$ strictement positif. Pour $n \in \N^{*}$ on note $\Pi_{n}$ la probabilité qu'au cours des $n$ premières épreuves, on ait obtenu $r$ succès consécutifs (au moins une fois).
+\question+\question+ Calculer $\Pi_{0}, \Pi_{1}, \ldots, \Pi_{r}$
+\question Montrer que, pour $n \geqslant r$ on a $\Pi_{n+1}=\Pi_{n}+\left(1-\Pi_{n-r}\right) p^{r}(1-p)$.
+\question Montrer que la suite $\left(\Pi_{n}\right)_{n \in \N}$ est convergente. Calculer sa limite.
+\question-\question+ Déduire de la question 1 que l'on peut définir une variable aléatoire $T$ égale au temps d'attente de $r$ succès consécutifs. On définira $(T=k)$ comme l'événement  «~on a obtenu des succès aux épreuves de rang $k-r+1, k-r+2$, $\ldots, k$ sans jamais avoir obtenu $r$ succès consécutifs auparavant~».
+\question Montrer que :
+$\ds\ES(T)=\frac{1-p^{r}}{(1-p) p^{r}}$
+\endquestions 
+\end{exercise}
+
+\begin{exercise}[title=Marche aléatoire dans $\mathbb{Z}:$ premier retour à l'origine]
+Soit $\left(X_{n}\right)_{n \in \N^{*}}$ une suite de variables aléatoires, sur le même espace probabilisé $(\Omega, \mathcal{A}, \PP)$, indépendantes et de même loi définie par
+\begin{equation*}
+\PP\left(X_{n}=1\right)=p \quad \text { et } \quad \PP\left(X_{n}=-1\right)=1-p
+\end{equation*}
+où $p \in[0,1] $. On pose $S_{0}=0$ et, pour tout $n \in \N^{*}, S_{n}=\sum_{k=1}^{n} X_{k}$.
+La suite $\left(S_{n}\right)$ est appelé marche aléatoire dans $\mathbb{Z} $. On peut imaginer un mobile partant de l'origine et se déplaçant à chaque instant (entier) de ±1 , les déplacements successifs étant indépendants. Alors $S_{n}$ représente la position du mobile au bout de $n$ déplacements.
+\question+\question+ Déterminer $u_{n}=\PP\left(S_{n}=0\right)$ pour tout $n \in \N$.
+\question On note $f(x)$ la somme de la série entière $\sum u_{n} x^{n}$. Montrer que :
+\begin{equation*}
+\forall x \in]-1,1[\quad f(x)=\frac{1}{\sqrt{1-4 p(1-p) x^{2}}}
+\end{equation*}
+\question- Pour tout entier naturel non nul $k$ on note $A_{k}$ l'événement « le mobile retourne pour la première fois à l'origine au bout $n$ déplacements », c'est-à-dire
+\begin{equation*}
+A_{k}=\left(S_{k}=0\right) \cap\left(\bigcap_{i=1}^{k-1}\left(S_{i} \neq 0\right)\right)
+\end{equation*}
+On pose $v_{k}=\PP\left(A_{k}\right)$ pour tout $k \geqslant 1$ et $v_{0}=0$
+\question+ Montrer que, pour tout entier naturel $n$ non nul, on a :
+\begin{equation*}
+\left(S_{n}=0\right)=\sum_{k=1}^{n} \PP\left(\left(S_{n}=0\right) \cap A_{k}\right)
+\end{equation*}
+\question En déduire que, pour tout entier naturel non nul $n$ on a :
+\begin{equation*}
+u_{n}=\sum_{k=0}^{n} u_{n-k} v_{k}
+\end{equation*}
+\question- On note $g(x)$ la somme de la série entière $\sum v_{n} x^{n}$.
+\question+ Montrer que le rayon de la série entière définissant $g(x)$ est supérieur ou égal à $1 $. Montrer que :
+\begin{equation*}
+\forall x \in]-1,1[\quad g(x)=\frac{f(x)-1}{f(x)}=1-\sqrt{1-4 p(1-p) x^{2}}
+\end{equation*}
+\question Déterminer la probabilité de l'événement $A:$ « il existe $n \in \N^{*}$ tel que $S_{n}=0 \mathrm{~m}$
+On suppose dans le reste de l'exercice que $p=\frac{1}{2}$.
+\question-\question+ Montrer que l'on peut définir une variable aléatoire $T$ égale au premier indice $n$ non nul pour lequel l'événement $\left\{S_{n}=0\right\}$ est réalisé.
+\question Montrer que l'on a, pour tout $n \in \N^{*}$,
+\begin{equation*}
+v_{2 n}=\frac{2\left(\begin{array}{c}
+2 n-2 \\
+n-1
+\end{array}\right)}{n 4^{n}}
+\end{equation*}
+\question La variable $T$ est-t-elle d'espérance finie?
+\question-\question+  Montrer que, pour tout $n \in \N^{*}$, on a
+\begin{equation*}
+v_{2 n}=u_{2 n-2}-u_{2 n}
+\end{equation*}
+\question Démontrer que la probabilité que le mobile soit à l'origine à l'issue des $2 n$ premiers déplacements est égal à la probabilité qu'il ne soit jamais à l'origine à l'issue d'aucun des $2 n$ premiers déplacements. En déduire $\PP\left(S_{1}>0, S_{2}>0, \ldots, S_{2 n}>0\right)$
+\endquestions 
+\end{exercise}
+
+
+\begin{exercise}[title=Loi faible des grands nombres dans $L_{1}$ ]
+Soit $\left(X_{n}\right)_{n} \geqslant 1$ une suite de variables aléatoires réelles discrètes, deux à deux indépendantes, de même loi, possédant un espérance finie $m$. On pose, pour tout $n \in \N^{*}, Y_{n}=\frac1n(X_{1}+\cdots+X_{n})$.
+Dans les deux premières questions, on suppose $m=0$.
+\question+ Soit $\varepsilon>0$
+\question+ Pour $c>0$ on définit $g: \R \longmapsto \R$ par 
+\formule{$g(x)=\left\{\begin{array}{ll}x & \text { si }|x| \leqslant c \\ 0 & \text { sinon. }\end{array}\right.$}
+Montrer que la variable aléatoire $g\left(X_{1}\right)$ est d'espérance finie et que l'on peut choisir $c$ tel que $\ES\left(\left|g\left(X_{1}\right)-X_{1}\right|\right) \leqslant \frac{\varepsilon}{2}$.
+Dans la suite de la question, $c$ est ainsi fixé.
+\question On pose $a=\ES\left(g\left(X_{1}\right)\right)$. Montrer que:
+$\ds\ES\left(\left|g\left(X_{1}\right)-X_{1}-a\right|\right) \leqslant \varepsilon$.
+
+\question On pose, pour tout $n \in \N^{*}, U_{n}=g\left(X_{n}\right)-a$ et $Y_{n}^{\prime}=\frac1n(U_{1}+\cdots+U_{n})$.
+Justifier que les variables $U_{n}$ admettent un moment d'ordre 2 . Montrer que $\lim _{n \rightarrow+\infty} \VA\left(Y_{n}^{\prime}\right)=0$.
+En déduire que $\lim _{n \rightarrow+\infty} \ES\left(|Y_{n}^{\prime}|\right)=0$.
+\question Montrer que $\lim _{n \rightarrow+\infty} \ES\left(\left|Y_{n}\right|\right)=0$.
+\question- Montrer que, pour tout $\varepsilon>0$ on a $\lim _{n \rightarrow+\infty} \PP\left(\left|Y_{n}\right| \geqslant \varepsilon\right)=0$
+\question On ne suppose plus $m=0$. Montrer que l'on a :
+\begin{equation*}
+\forall \varepsilon>0 \quad \lim _{n \rightarrow+\infty} \PP\left(\left|Y_{n}-m\right| \geqslant \varepsilon\right)=0
+\end{equation*}
+\endquestions 
+\end{exercise}
+
+
+\begin{exercise}[title=Chaînes de Markov] Soit $N \in \N^{*}$ et $\left(X_{n}\right)$ une suite de variables aléatoires sur un espace probabilisé $(\Omega, \mathcal{A}, \PP)$ à valeurs dans $\llbracket 1, N \rrbracket $. On dit que $\left(X_{n}\right)$ est une chaine de Markov homogène s'il existe une matrice $P=\left(p_{i, j}\right)_{1 \leqslant i, j \leqslant N} \in \mathcal{M}_{N}(\R)$ telle que, pour tout entier $n$ et tous éléments $x_{0}, x_{1}, \ldots, x_{n+1}$ de $\llbracket 1, N \rrbracket$ on ait :
+\begin{equation*}
+\begin{aligned}
+\PP\left(X_{n+1}=x_{n+1} \mid X_{0}\right.&\left.=x_{0}, \ldots, X_{n-1}=x_{n-1}, X_{n}=x_{n}\right) \\
+&=\PP\left(X_{n+1}=x_{n+1} \mid X_{n}=x_{n}\right)=p_{x_{n}, x_{n+1}}
+\end{aligned}
+\end{equation*}
+quand les probabilités conditionnelles sont définies. La matrice $P$ est appelée matrice de transition de la chaîne. Dans la suite, on considère une telle chaîne de Markov.
+\question+ Montrer que $P$ est une matrice à coefficients positifs dont la somme des coefficients de chaque ligne est égale à 1 (on dit que $P$ est une matrice stochastique). Montrer que 1 est valeur propre de $P$.
+\question\question+ Soit $x_{0} \in \llbracket 1, N \rrbracket$ tel que $\PP\left(X=x_{0}\right) \neq 0$. Montrer que, pour $n \in \N^{*}$ et $x_{1}$, $\ldots, x_{n}$ dans $\llbracket 1, N \rrbracket$ on a :
+\begin{equation*}
+\PP\left(X_{1}=x_{1}, \ldots, X_{n}=x_{n} \mid X_{0}=x_{0}\right)=p_{x_{0}, x_{1}} p_{x_{1}, x_{2}} \ldots p_{x_{n-1}, x_{n}}
+\end{equation*}
+\begin{equation*}[En déduire que :]
+\PP\left(X_{n}=x_{n} \mid X_{0}=x_{0}\right)=p_{x_{0}, x_{n}}^{(n)}
+\end{equation*}
+où $p_{x_{0}, x_{n}}^{(n)}$ est le coefficient d'indice $\left(x_{0}, x_{n}\right)$ de la matrice $P^{n}$.
+\question Montrer que, pour $n \in \N, k \in \N^{*}$ et $x_{0}, x_{1}, \ldots, x_{n+k}$ dans $\llbracket 1, N \rrbracket$ tels que $\PP\left(X_{0}=x_{0}, \ldots, X_{n}=x_{n}\right) \neq 0$ on a
+\begin{equation*}
+\begin{aligned}
+\PP\left(X_{n+1}\right.&\left.=x_{n+1}, \ldots, X_{n+k}=x_{n+k} \mid X_{0}=x_{0}, \ldots, X_{n}=x_{n}\right) \\
+&=\PP\left(X_{1}=x_{n+1}, \ldots, X_{k}=x_{n+k} \mid X_{0}=x_{n}\right)
+\end{aligned}
+\end{equation*}
+\question- On suppose désormais que tous les coefficients de $P$ sont strictement positifs. $\mathrm{On}$ pose $\varepsilon=\min _{(i, j) \in \llbracket 1, N]^{2}} p_{i, j}>0$. On fixe un élément $j$ et l'on considère les suites
+\begin{equation*}
+u_{n}=\max _{i \in \llbracket 1, N \rrbracket} p_{i, j}^{(n)} \quad \text { et } \quad v_{n}=\min _{i \in \llbracket 1, N \rrbracket} p_{i, j}^{(n)}
+\end{equation*}
+\question+ Montrer que pour tout entier naturel $n$ :
+\begin{equation*}
+u_{n+1} \leqslant(1-\varepsilon) u_{n}+\varepsilon v_{n} \quad \text { et } \quad v_{n+1} \geqslant(1-\varepsilon) v_{n}+u_{n}
+\end{equation*}
+\question Montrer que les suite $\left(u_{n}\right)$ et $\left(v_{n}\right)$ convergent vers la même limite.
+\question En déduire qu'il existe une probabilité $Q$ sur $\llbracket 1, N \rrbracket$ c'est-à-dire une famille $Q=\left(q_{j}\right)_{j \in \llbracket 1, N \rrbracket}$ d'entiers positifs, de somme $1$ telle que
+\begin{equation*}
+\forall(i, j) \in \llbracket 1, N \rrbracket^{2} \quad \lim _{n \rightarrow+\infty} \PP\left(X_{n}=j \mid X_{0}=i\right)=q_{j}
+\end{equation*}
+Montrer que $Q$ est la seule probabilité invariante par $P$ c'est-à-dire vérifiant $Q P=Q$
+\endquestions 
+\end{exercise}
+
+
+\begin{exercise} 
+Toutes les variables considérées dans cet exercice sont à valeurs dans $\mathbb{Z}$. Une variable aléatoire à valeurs dans $\mathbb{Z}$ est dite symétrique si
+\begin{equation*}
+\forall n \in \mathbb{Z} \quad \PP(X=n)=\PP(X=-n)
+\end{equation*}
+\question+\question+ Montrer que si $X$ est symétrique, alors 0 est une médiane de $X$, c'est-à-dire:
+\begin{equation*}
+\PP(X>0) \leqslant \frac{1}{2} \leqslant \PP(X \geqslant 0)
+\end{equation*}
+\question Montrer que si $X$ et $Y$ sont deux variables aléatoires indépendantes de même loi, alors $X-Y$ est symétrique.
+\question Montrer que si $X$ et $Y$ sont deux variables aléatoires symétriques indépendantes, alors $X+Y$ est symétrique.
+\question- On considère des variables aléatoires symétriques $X_{1}, X_{2}, \ldots, X_{n}$ indépendantes. On se donne $x \geqslant 0$. Pour $k \in \llbracket 1, n \rrbracket$ on pose $S_{k}=\sum_{j=1}^{k} X_{j}$ et, de plus, on note $\Omega_{k}$ l'événement $\left\{\max _{1 \leqslant j \leqslant k-1} S_{j} \leqslant x\right\} \cap\left\{S_{k}>x\right\}$ si $k \geqslant 2$ et $\Omega_{1}=\left\{S_{1}>x\right\}$.
+\question+ Montrer que $X_{1}+\cdots+X_{n}$ est symétrique.
+\question Montrer que, pour $k \in \llbracket 1, n \rrbracket$ on a
+\begin{equation*}
+\begin{array}{l}
+\left\{S_{n}-S_{k} \geqslant 0\right\} \cap \Omega_{k} \subset\left\{S_{n}>x\right\} \cap \Omega_{k} \quad \text { et } \\
+\PP\left(\left\{S_{n}-S_{k} \geqslant 0\right\} \cap \Omega_{k}\right) \geqslant \frac{1}{2} \PP\left(\Omega_{k}\right)
+\end{array}
+\end{equation*}
+\question Prouver que $\bigcup_{k=1}^{n} \Omega_{k}=\left\{\max _{1 \leqslant j \leqslant n} S_{j}>x\right\}$.
+\question En déduire l'inégalité de Paul Lévy :
+\begin{equation*}
+\PP\left(\max _{1 \leqslant j \leqslant n} S_{j}>x\right) \leqslant 2 \PP\left(S_{n}>x\right)
+\end{equation*}
+\endquestions 
+\end{exercise}
+
+
+\begin{exercise}[title=Inégalité de Kolmogorov]
+Soit $X_{1}, \ldots, X_{n}$ des variables aléatoires réelles discrètes de l'espace probabilisé $(\Omega, \mathcal{A}, \PP)$, indépendantes, ayant un moment d'ordre 2 , centrées, ainsi que $a \in \R_{+}^{*}$. On pose, pour tout $i \in \llbracket 1, n \rrbracket:$
+\begin{equation*}
+S_{i}=X_{1}+\cdots+X_{i}, \quad B_{i}=\left\{\left|S_{1}\right|<a\right\} \cap \ldots \cap\left\{\left|S_{i-1}\right|<a\right\} \cap\left\{\left|S_{i}\right| \geqslant a\right\}
+\end{equation*}
+\question+ Montrer que, pour $i \in \llbracket 1, n \rrbracket$, les variables $S_{i} \mathbf{1}_{B_{i}}$ et $S_{n}-S_{i}$ sont indépendantes. En déduire que :
+\begin{equation*}
+\ES\left(S_{n}^{2} \mathbf{1}_{B_{i}}\right)=\ES\left(S_{i}^{2} \mathbf{1}_{B_{i}}\right)+\ES\left(\left(S_{n}-S_{i}\right)^{2} \mathbf{1}_{B_{i}}\right) \geqslant a^{2} \PP\left(B_{i}\right)
+\end{equation*}
+\question\question+ On pose $C=\left\{\sup \left(\left|S_{1}\right|,\left|S_{2}\right|, \ldots,\left|S_{n}\right|\right) \geqslant a\right\}$.
+Montrer que $\PP(C)=\sum_{i=1}^{n} \PP\left(B_{i}\right)$
+\question En déduire l'inégalité de Kolmogorov:
+\begin{equation*}
+\PP\left(\sup \left(\left|S_{1}\right|,\left|S_{2}\right|, \ldots,\left|S_{n}\right|\right) \geqslant a\right) \leqslant \frac{\VA\left(S_{n}\right)}{a^{2}}
+\end{equation*}
+\endquestions 
+\end{exercise}
+
+\begin{exercise}[title=Inégalité de Le Cam]
+L'objet de l'exercice est d'étudier l'approximation de la loi binomiale par la loi de Poisson. Toutes les variables aléatoires considérées sont définies sur le même espace probabilisé $(\Omega, \mathcal{A}, \PP)$ et sont à valeurs dans $\N$.
+\question+ Soit $X$ et $Y$ deux telles variables aléatoires. Pour tout $k \in \N$, on pose $p_{k}=\PP(X=k)$ et $q_{k}=\PP(Y=k)$. On définit la distance entre $X$ et $Y$ par :
+\begin{equation*}
+\mathrm{d}(X, Y)=\frac{1}{2} \sum_{k=0}^{+\infty}\left|p_{k}-q_{k}\right|
+\end{equation*}
+\question+ Montrer que pour toute partie $A$ de $\N$, on a :
+\begin{equation*}
+|\PP(X \in A)-\PP(Y \in A)| \leqslant \mathrm{d}(X, Y)
+\end{equation*}
+\question Démontrer la formule :
+$\ds\mathrm{d}(X, Y)=1-\sum_{k=0}^{+\infty} \min \left(p_{k}, q_{k}\right)$
+\question En déduire :
+$\ds\mathrm{d}(X, Y) \leqslant \PP(X \neq Y)$
+\question-\question+ Vérifier que pour tout $x \in[0,1]$, le réel $f(x)=1-(1-x) \exp (x)$ appartient à $[0,1]$. Soit $U_{1}, \ldots, U_{n}, Y_{1}, \ldots, Y_{n}$ des variables aléatoires mutuellement indépendantes. On suppose que, pour $1 \leqslant i \leqslant n$, $U_{i}$ suit la loi de Bernoulli de paramètre $f(\nicefrac{\lambda}{n})$ et $Y_{i}$ suit la loi de Poisson de paramètre $\nicefrac{\lambda}{n}$. On pose $Y=\sum_{i=1}^{n} Y_{i}$. Enfin, pour $i \in \llbracket 1, n \rrbracket$ on considère la variable de Bernoulli $X_{i}$ telle que $X_{i}=0$ si $U_{i}=Y_{i}=0$ et $X_{i}=1$ sinon.
+\question Déterminer pour tout $i \in \llbracket 1, n \rrbracket$ la loi de $X_{i} $. En déduire la loi de $X=\sum_{i=1}^{n} X_{i}$. Quelle est la loi de $Y ?$
+\question Montrer que pour tout $i \in \llbracket 1, n \rrbracket:$
+$\ds\PP\left(X_{i} \neq Y_{i}\right) \leqslant \frac{\lambda^{2}}{n^{2}}$
+\question En déduire l'inégalité de Le Cam :
+$\mathrm{d}(X, Y) \leqslant \frac{\lambda^{2}}{n}$
+\endquestions 
+\end{exercise}
+
+
+\begin{exercise}[title=Convergence presque sure]
+Soit $\left(X_{n}\right)_{n \in \N}$ une suite de variables aléatoires réelles et $X$ une variable aléatoire réelle définies sur $(\Omega, \mathcal{A}, \PP) $. On pose :
+\begin{equation*}
+\begin{array}{r}
+B=\left\{\omega \in \Omega \mid \lim _{n \rightarrow+\infty} X_{n}(\omega)=X(\omega)\right\} \\
+\forall k \in \N^{*} \quad C_{k}=\bigcup_{n \in \N} \bigcap_{p \geqslant n}\Big(\left|X_{p}-X\right| \leqslant \frac{1}{k}\Big) .
+\end{array}
+\end{equation*}
+On dit que la suite $\left(X_{n}\right)_{n \in \N}$ converge presque surement vers $X$ si $\PP(B)=1$.
+\question+ Montrer que l'on a $\PP(B)=\lim _{k \rightarrow+\infty} \PP\left(C_{k}\right)$
+\question On suppose que :
+\begin{equation*}
+\forall \varepsilon>0 \quad \PP\Big(\bigcap_{n \in \N} \bigcup_{p \geqslant n}\big(|X_{p}-X|>\varepsilon\big)\Big)=0
+\end{equation*}
+Montrer que la suite $\left(X_{n}\right)_{n \in \N}$ converge presque surement vers $X$.
+\question Montrer que si la série de terme général $\PP\left(\left|X_{n}-X\right|>\varepsilon\right)$ converge pour tout $\varepsilon>0$ alors la suite $\left(X_{n}\right)_{n \in \N}$ converge presque surement vers $X$.
+\endquestions 
+\end{exercise}
+
+
+\begin{exercise}[title=Fonction génératrice des moments]
+Soit $X$ une variable aléatoire discrète, pas presque surement constante, sur l'espace probabilisé $(\Omega, \mathcal{A}, \PP) $. On pose, pour $t \in \R, L_{X}(t)=\ES\left(e^{t X}\right)$ (la fonction $L_{X}$ est appelée fonction génératrice des moments de la variable aléatoire $X$ ). On suppose qu'il existe un intervalle $] \alpha, \beta\left[\right.$. contenant 0 tel que $L_{X}(t)<+\infty$ pour tout $\left.t \in\right] \alpha, \beta[$.
+\question+\question+ Soit $a<b$ deux réels tels que $[a, b] \subset] \alpha, \beta[$. On considère $\delta>0$ tel que $[a-\delta, b+\delta] \subset] \alpha, \beta[$. Soit $k \in \N$. Montrer qu'il existe $C>0$ tel que :
+\begin{equation*}
+\forall t \in[a, b] \quad \forall u \in \R \quad|u|^{k} e^{t u} \leqslant C\left(e^{(a-\delta) u}+e^{(b+\delta) u}\right)
+\end{equation*}
+En déduire que $X^{k} e^{t X}$ est d'espérance finie pour tout $\left.t \in\right] \alpha, \beta[$.
+\question Montrer que $L_{X}$ est de classe $\mathcal{C}^{\infty}$ sur $] \alpha, \beta[$ et vérifie :
+\begin{equation*}
+\forall t \in] \alpha, \beta[\quad \forall k \in \N \quad L_{X}^{(k)}(t)=\ES\big(X^{k} e^{t X}\big)
+\end{equation*}
+En déduire, pour tout $k \in \N$ une expression du moment d'ordre $k$ de $X . \mathrm{On}$ note $m$ l'espérance de $X$.
+\question-\question+ On pose, pour tout $t \in] \alpha, \beta\left[, \Psi_{X}(t)=\ln L_{X}(t)\right.$.
+Montrer que $\Psi_{X}$ est strictement convexe.
+\question On note $I=\Psi_{X}^{\prime}(] \alpha, \beta[)$ et on pose $g(c)=\max _{t \in] \alpha, \beta[}\left(c t-\Psi_{X}(t),\right.$. pour tout $c \in I$.
+Montrer que $m \in I$. Calculer $g(m) ;$ montrer que $g(c)>0$ si $c \neq m$.
+\question Montrer que $g(c)=\left\{\begin{array}{l}\max _{t \in] \alpha, [0}\left(c t-\Psi_{X}(t)\right) \text { si } c<m \\ \max _{t \in] 0, \beta[}\left(c t-\Psi_{X}(t)\right) \text { si } c>m .\end{array}\right.$.
+\question En déduire les inégalités de Chernov:
+\begin{equation*}
+\begin{array}{lll}
+\PP(X \leqslant c) \leqslant e^{-g(c)} & \text { si } & c<m \\
+\PP(X \geqslant c) \leqslant e^{-g(c)} & \text { si } & c>m
+\end{array}
+\end{equation*}
+
+\question- On considère une suite $\left(X_{n}\right)_{n} \geqslant 1$ de variables aléatoires indépendantes suivant la même loi que $X$. On pose, pour tout $n \in \N^{*}, S_{n}=\sum_{k=1}^{n} X_{k}$.
+\question+ Soit $c \in I $. Montrer que:
+\begin{equation*}\aligned
+\PP\Big(\frac{S_{n}}{n} &\leqslant c\Big) \leqslant e^{-n g(c)} && \text { si }  c<m \\
+\PP\Big(\frac{S_{n}}{n} &\geqslant c\Big) \leqslant e^{-n g(c)} && \text { si }  c>m
+\endaligned
+\end{equation*}
+\question Soit $\varepsilon>0$. Montrer que, pour $\varepsilon$ assez petit, on a :
+\begin{equation*}
+\PP\left(\left|\frac{S_{n}}{n}-m\right| \geqslant \varepsilon\right) \leqslant 2 e^{-n \min (g(m+\varepsilon), g(m-\varepsilon))}
+\end{equation*}
+\question En utilisant le résultat de l'exercice $16.25$ montrer que la suite $\left(\frac{S_{n}}{n}\right)$ converge presque surement vers $m$.
+
+\endquestions 
+\end{exercise}
+
+
+\begin{exercise}[title=Théorème de Weierstrass]
+Soit $f$ une fonction continue de [0,1] dans $\R $. Soit $x \in[0,1] $. On considère une suite $\left(X_{n}\right)_{n \geqslant 1}$ de variables de Bernoulli de paramètre $x$, indépendantes, sur le même espace probabilisé. Pour $n \geqslant 1$ on pose $Y_{n}=\frac{X_{1}+\cdots+X_{n}}{n}$.
+\question+ Soit $\varepsilon>0$. Par uniforme continuité de $f$ sur [0,1] , il existe $\eta>0$ tel que :
+\begin{equation*}
+\forall(t, u) \in[0,1]^{2} \quad|t-u| \leqslant \eta \Longrightarrow|f(t)-f(u)| \leqslant \varepsilon
+\end{equation*}
+\question+ Montrer que :
+\begin{equation*}
+\forall(t, u) \in[0,1]^{2} \quad|f(t)-f(u)| \leqslant \frac{2\Vert f\Vert _{\infty}(t-u)^{2}}{\eta^{2}}+\varepsilon
+\end{equation*}
+\question En déduire que
+\begin{equation*}
+\left|\ES\left(f\left(Y_{n}\right)\right)-f(x)\right| \leqslant \frac{2\Vert f\Vert _{\infty} \VA\left(Y_{n}\right)}{\eta^{2}}+\varepsilon \leqslant \frac{2\Vert f\Vert _{\infty}}{n \eta^{2}}+\varepsilon
+\end{equation*}
+\question- On considère les polynômes de Bernstein définis par :
+\begin{equation*}
+\forall x \in \R \quad B_{n}(f)=\sum_{k=0}^{n} f\Big(\frac kn\Big)\binom nk x^{k}(1-x)^{k} .
+\end{equation*}
+Montrer que la suite $\left(B_{n}(f)\right)$ converge uniformément vers $f$ sur [0,1] .
+\endquestions 
+\end{exercise}
+
+
+\begin{exercise}
+ Soit $n$ un entier supérieur ou égal à 2 . On considère une file d'attente avec un guichet et $n$ clients qui attendent. Chaque minute, un guichet se libère. Le guichetier choisit alors le client qu'il appelle selon le processus aléatoire suivant:
+ \begin{itemize}
+\item avec probabilité 2 , il appelle le client en première position dans la file,
+\item sinon, il choisit de manière équiprobable parmi les $n-1$ autres clients.
+\end{itemize}
+Enfin, un nouveau client arrive dans la file et se place en dernière position (de telle sorte qu'il y a toujours exactement $n$ clients qui attendent). Pour tout $k \in \llbracket 1, n \rrbracket$ on note $T_{k}$ le temps d'attente d'un client qui se trouve en position $k$ dans la file.
+\question+ Quelle est la loi de $T_{1}$ ? Donner son espérance, sa variance.
+\question Montrer que, pour tout $k \in \llbracket 1, n \rrbracket$ la variable $T_{k}$ est d'espérance finie.
+\question Écrire une relation entre $\ES\left(T_{k}\right)$ et $\ES\left(T_{k-1}\right)$ pour tout $k \geqslant 2$. En déduire une expression de $\ES\left(T_{k}\right)$ en fonction de $k$ et $n$. On pourra considérer la suite $\left((n+k-2) \ES\left(T_{k}\right)\right)_{1 \leqslant k \leqslant n} $.
+\question Comparer les caractéristiques de cette file d'attente et d'une file d'attente \og classique \fg (premier arrivé, premier servi).
+\endquestions 
+\end{exercise}
+
+
+\begin{exercise}[title=Cachan-Rennes 2015]
+Soit $X$ et $Y$ deux variables aléatoires réelles d'espérance finie sur le même espace probabilisé. On considère les trois propriétés suivantes :
+\question+(|i|)
+$X$ et $Y$ sont presque surement constante
+\question $X$ et $Y$ sont indépendantes ;
+\question $X Y$ est d'espérance finie et $\ES(X Y)=\ES(X) \ES(Y)$.
+\endquestions 
+
+\question+ Montrer que $(i) \Rightarrow(ii)$ et que $(ii) \Rightarrow(iii)$ mais qu'aucune réciproque n'est vraie.
+\question Montrer que $(i i i) \Rightarrow(i)$ est vrai s'il existe $f:\R \rightarrow \R$ et $g: \R \rightarrow\R$  strictement croissantes ainsi qu'une variable aléatoire réelle $Z$ telle que $X=f(Z)$ et $Y=g(Z)$.
+
+On admettra qu'aucune généralité n'est perdue à supposer qu'il existe une seconde variable aléatoire $Z^{\prime}$ indépendante de $Z$ et suivant la même loi que $Z $. On introduira la fonction :
+\begin{equation*}
+\theta:(a, b) \in \R^{2} \mapsto(f(a)-f(b))(g(a)-g(b))
+\end{equation*}
+et on s'intéressera a a la variable $\theta\left(Z, Z^{\prime}\right)$.
+\endquestions 
+\end{exercise}
+
+\begin{exercise}[title=Polytechnique 2015]
+Soit $X_{1}$ et $X_{2}$ deux variables aléatoires sur le même espace probabilisé, à valeurs dans $\mathbb{Z}$ tel que $\ES\left(\left|X_{2}\right|\right)<+\infty$
+\question+ Montrer qu'il existe une variable aléatoire $Y_{1}$ d'espérance finie, qui s'écrit $Y_{1}=h\left(X_{1}\right)$ où $h$ est une fonction de $\mathbb{Z}$ dans IR, et telle que, pour tout application bornée $f$ de $\mathbb{Z}$ dans IR, on ait:
+\begin{equation*}
+\ES\left(X_{2} f\left(X_{1}\right)\right)=\ES\left(Y_{1} f\left(X_{1}\right)\right)
+\end{equation*}
+\question Montrer que si une autre variable aléatoire a les mêmes propriétés que $Y_{1}$ elle est égale à $Y_{1}$ presque surement.
+\question La variable aléatoire $Y_{1}$ étant définie et unique, on la note $\ES\left(X_{2} \mid X_{1}\right):$ c'est l'espérance conditionnelle de $X_{2}$ par rapport à $X_{1} $. Soit $g$ une application bornée de $\mathbb{Z}$ vers IR. Montrer que :
+\begin{equation*}
+\ES\left(X_{2} g\left(X_{1}\right) \mid X_{1}\right)=g\left(X_{1}\right) \ES\left(X_{2} \mid X_{1}\right)
+\end{equation*}
+\endquestions 
+\end{exercise}

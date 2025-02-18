@@ -1,40 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<chapter xml:id="ch-generalites" xmlns:xi="http://www.w3.org/2001/XInclude">
+<section xml:id="sec-generalites" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Espaces de probabilité</title>
 
-  <section xml:id="sec-objectifs">
-    <title>Objectifs d'apprentissage</title>
-
-    <p>
-      À la fin de ce chapitre, vous devriez être capable de :
-    </p>
-
-    <p>
-      <ul>
-        <li>
-          <p>
-            de construire un modèle qui correspond à une expérience aléatoire ;
-          </p>
-        </li>
-
-        <li>
-          <p>
-            calculer la probabilité d'un événement dans l'espace construit ;
-          </p>
-        </li>
-
-        <li>
-          <p>
-            utiliser un modèle pour des calculs avancés
-          </p>
-        </li>
-      </ul>
-    </p>
-  </section>
-
-  <section xml:id="sec-tribu">
-    <title>Tribus</title>
+  
 
     <p>
       Dans tout le chapitre <m>\Omega</m> désignera un ensemble non vide. <m>I</m> est une ensemble non vide qui sera souvent utilisé comme ensemble d'indices.
@@ -46,6 +15,11 @@
     <p>
       Si <m>A</m> est une partie de <m>\Omega</m> on notera <m>A^c</m> son complémentaire dans <m>\Omega</m>. 
     </p>
+
+  <subsection xml:id="subsec-tribu">
+    <title>Tribus</title>
+
+    
 
     <definition xml:id="def-tribu">
       <statement>
@@ -127,7 +101,7 @@
           <li>
             <p>
               Soit <m>\mathcal A</m> un ensemble de parties de <m>\Omega</m>.
-              L'intersection de toutes les tribus de <m>\Omega</m> contenant <m>\mathcal A</m> est une tribu de <m>\Omega</m>.
+              L'intersubsection de toutes les tribus de <m>\Omega</m> contenant <m>\mathcal A</m> est une tribu de <m>\Omega</m>.
               Elle est appelée la tribu engendrée par <m>\mathcal A</m>.
               On la notera <m>\sigma(\mathcal A)</m>.
             </p>
@@ -259,14 +233,14 @@
         </p>
       </statement>
     </proposition>
-  </section>
+  </subsection>
 
-  <section xml:id="sec-probabilite">
+  <subsection xml:id="subsec-probabilite">
     <title>Probabilités</title>
 
     <note>
       <p>
-        Dans toute cette section, <m>(\Omega,\mathscr T)</m> désignera un espace probabilisable.
+        Dans toute cette subsection, <m>(\Omega,\mathscr T)</m> désignera un espace probabilisable.
       </p>
     </note>
 
@@ -800,9 +774,9 @@
         </p>
       </solution>
     </example>
-  </section>
+  </subsection>
 
-  <section xml:id="sec-independance">
+  <subsection xml:id="subsec-independance">
     <title>Indépendance des événements</title>
 
     <note>
@@ -964,9 +938,9 @@
         </p>
       </proof>
     </proposition>
-  </section>
+  </subsection>
 
-  <section xml:id="sec-modelisation">
+  <subsection xml:id="subsec-modelisation">
     <title>Modélisation de phénomènes aléatoires</title>
 
     <p>
@@ -1164,7 +1138,7 @@
         </ul>
       </p>
     </example>
-  </section>
+  </subsection>
 
   <exercises xml:id="exercises-approfondissement">
   <title>Activités</title>
@@ -1314,4 +1288,4 @@
     </statement>
   </activity>
   </exercises>
-</chapter>
+</section>

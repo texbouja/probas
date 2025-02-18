@@ -16,7 +16,7 @@
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
 
 <!-- Assumes current file is in discrete-text/xsl and that the mathbook repository is adjacent -->
-<xsl:import pretext-href="pretext-epub.xsl" />
+<xsl:import href="./core/pretext-epub.xsl" />
 <!-- Assumes next file can be found in discrete-text/xsl -->
 <xsl:import href="custom-common.xsl" />
 
@@ -81,10 +81,10 @@
 <!-- WeBWorK -->
 <!-- There is no default server provided         -->
 <!-- Interactions are with an "anonymous" course -->
-<xsl:param name="webwork.server" select="''"/>
+<!-- <xsl:param name="webwork.server" select="''"/>
 <xsl:param name="webwork.course" select="'anonymous'" />
 <xsl:param name="webwork.userID" select="'anonymous'" />
-<xsl:param name="webwork.password" select="'anonymous'" />
+<xsl:param name="webwork.password" select="'anonymous'" /> -->
 
 <!-- Permalinks -->
 <!-- Next to subdivision headings a "paragraph" symbol     -->

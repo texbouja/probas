@@ -1,5 +1,5 @@
-/home/Backup/Dropbox/2024/projects/probas/source/main.ptx:233:0:ERROR:RELAXNGV:RELAXNG_ERR_NOELEM: Expecting an element nbsp, got nothing
-/home/Backup/Dropbox/2024/projects/probas/source/main.ptx:36:0:ERROR:RELAXNGV:RELAXNG_ERR_EXTRACONTENT: Element chapter has extra content: section
-/home/Backup/Dropbox/2024/projects/probas/source/main.ptx:6:0:ERROR:RELAXNGV:RELAXNG_ERR_ELEMWRONG: Did not expect element frontmatter there
-/home/Backup/Dropbox/2024/projects/probas/source/main.ptx:8:0:ERROR:RELAXNGV:RELAXNG_ERR_CONTENTVALID: Element book failed to validate content
-/home/Backup/Dropbox/2024/projects/probas/source/main.ptx:3:0:ERROR:RELAXNGV:RELAXNG_ERR_ELEMNAME: Expecting element docinfo, got pretext
+/home/Backup/Dropbox/2024/projects/probas/source/main.ptx:16:0:ERROR:RELAXNGV:RELAXNG_ERR_ELEMNAME: Expecting element p, got objectives
+/home/Backup/Dropbox/2024/projects/probas/source/main.ptx:16:0:ERROR:RELAXNGV:RELAXNG_ERR_ELEMWRONG: Did not expect element objectives there
+/home/Backup/Dropbox/2024/projects/probas/source/main.ptx:16:0:ERROR:RELAXNGV:RELAXNG_ERR_ELEMNAME: Expecting element sidebyside, got objectives
+/home/Backup/Dropbox/2024/projects/probas/source/main.ptx:16:0:ERROR:RELAXNGV:RELAXNG_ERR_ELEMNAME: Expecting element proof, got objectives
+/home/Backup/Dropbox/2024/projects/probas/source/main.ptx:16:0:ERROR:RELAXNGV:RELAXNG_ERR_ELEMNAME: Expecting element exercise, got objectives
