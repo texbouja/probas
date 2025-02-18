@@ -49,14 +49,14 @@
         </ul>
       </objectives>
 
-      <xi:include href="./generalites.ptx" />
-      <xi:include href="./variables_aleatoires.ptx" />
-      <xi:include href="./esperance_et_moments.ptx" />
-      <xi:include href="./fonctions_generatrices.ptx" />
+      <xi:include href="./sec-generalites.ptx" />
+      <xi:include href="./sec-variables_aleatoires.ptx" />
+      <xi:include href="./sec-esperance_et_moments.ptx" />
+      <xi:include href="./sec-fonctions_generatrices.ptx" />
     </chapter>
 
    
-    <xi:include href="./exercices.ptx" />
+    <xi:include href="./ch-exercices.ptx" />
     <!-- Include backmatter -->
     <!-- <xi:include href="./backmatter.ptx" /> -->
   </book>

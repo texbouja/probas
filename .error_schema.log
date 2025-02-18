@@ -1,5 +1,5 @@
 /home/Backup/Dropbox/2024/projects/probas/source/main.ptx:16:0:ERROR:RELAXNGV:RELAXNG_ERR_ELEMNAME: Expecting element p, got objectives
-/home/Backup/Dropbox/2024/projects/probas/source/main.ptx:16:0:ERROR:RELAXNGV:RELAXNG_ERR_ELEMWRONG: Did not expect element objectives there
-/home/Backup/Dropbox/2024/projects/probas/source/main.ptx:16:0:ERROR:RELAXNGV:RELAXNG_ERR_ELEMNAME: Expecting element sidebyside, got objectives
-/home/Backup/Dropbox/2024/projects/probas/source/main.ptx:16:0:ERROR:RELAXNGV:RELAXNG_ERR_ELEMNAME: Expecting element proof, got objectives
-/home/Backup/Dropbox/2024/projects/probas/source/main.ptx:16:0:ERROR:RELAXNGV:RELAXNG_ERR_ELEMNAME: Expecting element exercise, got objectives
+/home/Backup/Dropbox/2024/projects/probas/source/main.ptx:208:0:ERROR:RELAXNGV:RELAXNG_ERR_NOELEM: Expecting an element nbsp, got nothing
+/home/Backup/Dropbox/2024/projects/probas/source/main.ptx:207:0:ERROR:RELAXNGV:RELAXNG_ERR_ELEMNAME: Expecting element blockquote, got p
+/home/Backup/Dropbox/2024/projects/probas/source/main.ptx:207:0:ERROR:RELAXNGV:RELAXNG_ERR_ELEMWRONG: Did not expect element p there
+/home/Backup/Dropbox/2024/projects/probas/source/main.ptx:207:0:ERROR:RELAXNGV:RELAXNG_ERR_NOELEM: Expecting an element p, got nothing
